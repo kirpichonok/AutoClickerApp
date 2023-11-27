@@ -1,0 +1,5 @@
+identifier_name:
+    excluded: [id, a, b, c, i, j, k, x, y, z]
+    
+trailing_comma:
+    mandatory_comma: true
