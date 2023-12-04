@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19057FA12B1DCF92006D94E2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19057FA02B1DCF92006D94E2 /* RoundedButton.swift */; };
 		191E109F2B5966CB00707733 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E109E2B5966CB00707733 /* PreviewContainer.swift */; };
 		19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */; };
 		19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19057FA02B1DCF92006D94E2 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		191E109E2B5966CB00707733 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		19BBBD972B14E3940053F1C5 /* Auto-Clicker-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto-Clicker-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				191E109E2B5966CB00707733 /* PreviewContainer.swift */,
 				19BBDE822B1DA37900824BBE /* Gradient.swift */,
+				19057FA02B1DCF92006D94E2 /* RoundedButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				19CD2C7D2B592838006DCC37 /* String+K.swift in Sources */,
 				19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */,
+				19057FA12B1DCF92006D94E2 /* RoundedButton.swift in Sources */,
 				19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */,
 				19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */,
 				191E109F2B5966CB00707733 /* PreviewContainer.swift in Sources */,
