@@ -17,9 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="moN-z8-Rwg" customClass="ToolBarView" customModule="Auto_Clicker_App" customModuleProvider="target">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="moN-z8-Rwg">
                                 <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <items/>
+                                <items>
+                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="WY0-0w-GsX"/>
+                                    <barButtonItem title="Item" image="chevron.left" catalog="system" id="7Gr-Re-ZP4"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qgp-Na-alv"/>
+                                    <barButtonItem image="chevron.right" catalog="system" id="GOe-0s-Kwo"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6nV-1O-rmt"/>
+                                    <barButtonItem image="arrow-outline" id="EQe-R9-kUZ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gHJ-zK-Rm7"/>
+                                    <barButtonItem image="refresh" id="IVX-ch-bpA"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rw5-gt-2o6"/>
+                                    <barButtonItem image="home" id="naK-oL-Cdd"/>
+                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="wl7-Oa-PRx"/>
+                                </items>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAz-Qh-Zd4"/>
@@ -37,6 +49,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-outline" width="24" height="24"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="home" width="24" height="24"/>
+        <image name="refresh" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
