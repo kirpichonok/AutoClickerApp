@@ -5,4 +5,9 @@ enum Gradient {
         UIColor.backgroundGradientOne.cgColor,
         UIColor.backgroundGradientTwo.cgColor,
     ]
+
+    static let purple = [
+        UIColor.purpleApp.cgColor,
+        UIColor.purpleLightApp.cgColor,
+    ]
 }

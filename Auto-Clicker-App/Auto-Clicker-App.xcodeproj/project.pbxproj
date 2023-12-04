@@ -10,6 +10,7 @@
 		19057FA12B1DCF92006D94E2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19057FA02B1DCF92006D94E2 /* RoundedButton.swift */; };
 		191E109F2B5966CB00707733 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E109E2B5966CB00707733 /* PreviewContainer.swift */; };
 		191E10A22B5969CC00707733 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191E10A12B5969CC00707733 /* WebKit.framework */; };
+		191E10A42B596A5F00707733 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E10A32B596A5F00707733 /* MainScreenVC.swift */; };
 		19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */; };
 		19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */; };
 		19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA02B14E3940053F1C5 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		19057FA02B1DCF92006D94E2 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		191E109E2B5966CB00707733 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		191E10A12B5969CC00707733 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		191E10A32B596A5F00707733 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		19BBBD972B14E3940053F1C5 /* Auto-Clicker-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto-Clicker-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190042DA2B1E010100199D11 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				191E10A32B596A5F00707733 /* MainScreenVC.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		191E109B2B595FE100707733 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 			children = (
 				19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */,
 				19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */,
+				190042DA2B1E010100199D11 /* MainScreen */,
 				19BBBDA02B14E3940053F1C5 /* Main.storyboard */,
 				19BBDE842B1DA37D00824BBE /* Helpers */,
 				19BBBDA32B14E3960053F1C5 /* Assets.xcassets */,
@@ -204,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191E10A42B596A5F00707733 /* MainScreenVC.swift in Sources */,
 				19CD2C7D2B592838006DCC37 /* String+K.swift in Sources */,
 				19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */,
 				19057FA12B1DCF92006D94E2 /* RoundedButton.swift in Sources */,

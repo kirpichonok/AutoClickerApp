@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main ScreenVC-->
         <scene sceneID="CYh-Zx-d4a">
             <objects>
-                <viewController id="pXs-3v-wQg" sceneMemberID="viewController">
+                <viewController id="pXs-3v-wQg" customClass="MainScreenVC" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yO7-yP-vYJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-IF-V6C" customClass="RoundedButton" customModule="Auto_Clicker_App" customModuleProvider="target">
                                                 <rect key="frame" x="41" y="16" width="311" height="48"/>
-                                                <color key="backgroundColor" name="Red Gradient One"/>
+                                                <color key="backgroundColor" name="PurpleLightApp"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="HTK-82-bTM"/>
                                                     <constraint firstAttribute="height" constant="48" id="rkY-ax-oi8"/>
@@ -98,6 +98,9 @@
                             <constraint firstItem="OV2-82-8Mj" firstAttribute="top" secondItem="Gdh-wy-RiS" secondAttribute="bottom" id="wcx-qs-NGi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="Rvm-IF-V6C" id="eqk-s4-PZJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-B1-x4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,8 +115,8 @@
         <namedColor name="Background Gradient One">
             <color red="0.20000000000000001" green="0.16078431372549021" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Red Gradient One">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="PurpleLightApp">
+            <color red="0.76078431372549016" green="0.56470588235294117" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
