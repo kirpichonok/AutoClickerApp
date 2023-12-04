@@ -66,13 +66,24 @@
                                     </toolbar>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-YQ-k8a" customClass="RoundedTextField" customModule="Auto_Clicker_App" customModuleProvider="target">
+                                <rect key="frame" x="16" y="59" width="361" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="eVa-eO-ufd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAz-Qh-Zd4"/>
                         <color key="backgroundColor" name="Background Gradient One"/>
                         <constraints>
                             <constraint firstItem="OV2-82-8Mj" firstAttribute="trailing" secondItem="XAz-Qh-Zd4" secondAttribute="trailing" id="5cG-7g-wDt"/>
+                            <constraint firstItem="9fP-YQ-k8a" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" constant="16" id="KGX-g1-Vmu"/>
                             <constraint firstItem="OV2-82-8Mj" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="Rwh-SW-c0h"/>
+                            <constraint firstItem="9fP-YQ-k8a" firstAttribute="top" secondItem="XAz-Qh-Zd4" secondAttribute="top" id="T7s-bx-eEu"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="bottom" secondItem="OV2-82-8Mj" secondAttribute="bottom" id="XRC-Sc-SYq"/>
+                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="9fP-YQ-k8a" secondAttribute="trailing" constant="16" id="ofu-ew-six"/>
                         </constraints>
                     </view>
                 </viewController>
