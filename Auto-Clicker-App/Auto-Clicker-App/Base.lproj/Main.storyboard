@@ -2,17 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pXs-3v-wQg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Web View Controller-->
+        <!--View Controller-->
         <scene sceneID="CYh-Zx-d4a">
             <objects>
-                <viewController id="pXs-3v-wQg" customClass="WebViewController" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pXs-3v-wQg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yO7-yP-vYJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,11 +24,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qgp-Na-alv"/>
                                     <barButtonItem image="chevron.right" catalog="system" id="GOe-0s-Kwo"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6nV-1O-rmt"/>
-                                    <barButtonItem image="arrow-outline" id="EQe-R9-kUZ"/>
+                                    <barButtonItem image="arrow.circlepath" catalog="system" id="EQe-R9-kUZ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gHJ-zK-Rm7"/>
-                                    <barButtonItem image="refresh" id="IVX-ch-bpA"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rw5-gt-2o6"/>
-                                    <barButtonItem image="home" id="naK-oL-Cdd"/>
+                                    <barButtonItem image="scope" catalog="system" id="IVX-ch-bpA"/>
                                     <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="wl7-Oa-PRx"/>
                                 </items>
                             </toolbar>
@@ -49,11 +46,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-outline" width="24" height="24"/>
+        <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="home" width="24" height="24"/>
-        <image name="refresh" width="24" height="24"/>
+        <image name="scope" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
