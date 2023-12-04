@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,27 +16,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="moN-z8-Rwg">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <items>
-                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="WY0-0w-GsX"/>
-                                    <barButtonItem title="Item" image="chevron.left" catalog="system" id="7Gr-Re-ZP4"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qgp-Na-alv"/>
-                                    <barButtonItem image="chevron.right" catalog="system" id="GOe-0s-Kwo"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6nV-1O-rmt"/>
-                                    <barButtonItem image="arrow.circlepath" catalog="system" id="EQe-R9-kUZ"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gHJ-zK-Rm7"/>
-                                    <barButtonItem image="scope" catalog="system" id="IVX-ch-bpA"/>
-                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="wl7-Oa-PRx"/>
-                                </items>
-                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-82-8Mj">
+                                <rect key="frame" x="0.0" y="694" width="393" height="124"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMN-5A-gJX">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-IF-V6C" customClass="RoundedButton" customModule="Auto_Clicker_App" customModuleProvider="target">
+                                                <rect key="frame" x="41" y="16" width="311" height="48"/>
+                                                <color key="backgroundColor" name="Red Gradient One"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="HTK-82-bTM"/>
+                                                    <constraint firstAttribute="height" constant="48" id="rkY-ax-oi8"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Let's start">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="SFPro-Semibold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="top" secondItem="xMN-5A-gJX" secondAttribute="top" constant="16" id="0iv-AX-gR4"/>
+                                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="centerX" secondItem="xMN-5A-gJX" secondAttribute="centerX" id="Buc-rq-HhG"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rvm-IF-V6C" secondAttribute="bottom" constant="16" id="n64-Ry-qyT"/>
+                                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="centerY" secondItem="xMN-5A-gJX" secondAttribute="centerY" id="qPq-X7-EA9"/>
+                                        </constraints>
+                                    </view>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moN-z8-Rwg">
+                                        <rect key="frame" x="0.0" y="80" width="393" height="44"/>
+                                        <items>
+                                            <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="WY0-0w-GsX"/>
+                                            <barButtonItem title="Item" image="chevron.left" catalog="system" id="7Gr-Re-ZP4"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="qgp-Na-alv"/>
+                                            <barButtonItem image="chevron.right" catalog="system" id="GOe-0s-Kwo"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="6nV-1O-rmt"/>
+                                            <barButtonItem image="arrow.circlepath" catalog="system" id="EQe-R9-kUZ"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="gHJ-zK-Rm7"/>
+                                            <barButtonItem image="scope" catalog="system" id="IVX-ch-bpA"/>
+                                            <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="wl7-Oa-PRx"/>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAz-Qh-Zd4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background Gradient One"/>
                         <constraints>
-                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="bottom" secondItem="moN-z8-Rwg" secondAttribute="bottom" id="mND-56-DUH"/>
-                            <constraint firstAttribute="trailing" secondItem="moN-z8-Rwg" secondAttribute="trailing" id="uKI-Sc-v2i"/>
-                            <constraint firstItem="moN-z8-Rwg" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="xnn-XH-SdJ"/>
+                            <constraint firstItem="OV2-82-8Mj" firstAttribute="trailing" secondItem="XAz-Qh-Zd4" secondAttribute="trailing" id="5cG-7g-wDt"/>
+                            <constraint firstItem="OV2-82-8Mj" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="Rwh-SW-c0h"/>
+                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="bottom" secondItem="OV2-82-8Mj" secondAttribute="bottom" id="XRC-Sc-SYq"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -50,8 +86,11 @@
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="scope" catalog="system" width="128" height="124"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="Background Gradient One">
+            <color red="0.20000000000000001" green="0.16078431372549021" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Red Gradient One">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
