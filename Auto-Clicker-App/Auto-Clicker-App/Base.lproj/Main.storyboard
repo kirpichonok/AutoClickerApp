@@ -74,6 +74,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-wy-RiS">
+                                <rect key="frame" x="0.0" y="109" width="393" height="585"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAz-Qh-Zd4"/>
                         <color key="backgroundColor" name="Background Gradient One"/>
@@ -83,7 +91,11 @@
                             <constraint firstItem="OV2-82-8Mj" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="Rwh-SW-c0h"/>
                             <constraint firstItem="9fP-YQ-k8a" firstAttribute="top" secondItem="XAz-Qh-Zd4" secondAttribute="top" id="T7s-bx-eEu"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="bottom" secondItem="OV2-82-8Mj" secondAttribute="bottom" id="XRC-Sc-SYq"/>
+                            <constraint firstItem="Gdh-wy-RiS" firstAttribute="top" secondItem="9fP-YQ-k8a" secondAttribute="bottom" constant="8" id="Zpg-4q-6LA"/>
+                            <constraint firstItem="Gdh-wy-RiS" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="n2P-qu-hjX"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="9fP-YQ-k8a" secondAttribute="trailing" constant="16" id="ofu-ew-six"/>
+                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="Gdh-wy-RiS" secondAttribute="trailing" id="pBs-Jd-n0K"/>
+                            <constraint firstItem="OV2-82-8Mj" firstAttribute="top" secondItem="Gdh-wy-RiS" secondAttribute="bottom" id="wcx-qs-NGi"/>
                         </constraints>
                     </view>
                 </viewController>
