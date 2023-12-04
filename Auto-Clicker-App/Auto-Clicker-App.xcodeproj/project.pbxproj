@@ -11,6 +11,7 @@
 		19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */; };
 		19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA02B14E3940053F1C5 /* Main.storyboard */; };
 		19BBBDA42B14E3960053F1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA32B14E3960053F1C5 /* Assets.xcassets */; };
+		19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBDE822B1DA37900824BBE /* Gradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		19BBBDA12B14E3940053F1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19BBBDA32B14E3960053F1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19BBBDA82B14E3960053F1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19BBDE822B1DA37900824BBE /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +57,27 @@
 				19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */,
 				19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */,
 				19BBBDA02B14E3940053F1C5 /* Main.storyboard */,
+				19BBDE842B1DA37D00824BBE /* Helpers */,
 				19BBBDA32B14E3960053F1C5 /* Assets.xcassets */,
 				19BBBDA82B14E3960053F1C5 /* Info.plist */,
 			);
 			path = "Auto-Clicker-App";
+			sourceTree = "<group>";
+		};
+		19BBDE842B1DA37D00824BBE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				19BBDE852B1DA38700824BBE /* UI */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		19BBDE852B1DA38700824BBE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				19BBDE822B1DA37900824BBE /* Gradient.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +175,7 @@
 			files = (
 				19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */,
 				19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */,
+				19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
