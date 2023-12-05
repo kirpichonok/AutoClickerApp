@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pXs-3v-wQg">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,61 +13,11 @@
             <objects>
                 <viewController id="pXs-3v-wQg" customClass="MainScreenVC" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yO7-yP-vYJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-82-8Mj">
-                                <rect key="frame" x="0.0" y="694" width="393" height="124"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMN-5A-gJX">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-IF-V6C" customClass="RoundedButton" customModule="Auto_Clicker_App" customModuleProvider="target">
-                                                <rect key="frame" x="41" y="16" width="311" height="48"/>
-                                                <color key="backgroundColor" name="PurpleLightApp"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="HTK-82-bTM"/>
-                                                    <constraint firstAttribute="height" constant="48" id="rkY-ax-oi8"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Let's start">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="17" name="SFPro-Semibold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="top" secondItem="xMN-5A-gJX" secondAttribute="top" constant="16" id="0iv-AX-gR4"/>
-                                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="centerX" secondItem="xMN-5A-gJX" secondAttribute="centerX" id="Buc-rq-HhG"/>
-                                            <constraint firstAttribute="bottom" secondItem="Rvm-IF-V6C" secondAttribute="bottom" constant="16" id="n64-Ry-qyT"/>
-                                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="centerY" secondItem="xMN-5A-gJX" secondAttribute="centerY" id="qPq-X7-EA9"/>
-                                        </constraints>
-                                    </view>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moN-z8-Rwg">
-                                        <rect key="frame" x="0.0" y="80" width="393" height="44"/>
-                                        <items>
-                                            <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="WY0-0w-GsX"/>
-                                            <barButtonItem title="Item" image="chevron.left" catalog="system" id="7Gr-Re-ZP4"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="qgp-Na-alv"/>
-                                            <barButtonItem image="chevron.right" catalog="system" id="GOe-0s-Kwo"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="6nV-1O-rmt"/>
-                                            <barButtonItem image="arrow.circlepath" catalog="system" id="EQe-R9-kUZ"/>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="gHJ-zK-Rm7"/>
-                                            <barButtonItem image="scope" catalog="system" id="IVX-ch-bpA"/>
-                                            <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="wl7-Oa-PRx"/>
-                                        </items>
-                                    </toolbar>
-                                </subviews>
-                            </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-YQ-k8a" customClass="RoundedTextField" customModule="Auto_Clicker_App" customModuleProvider="target">
-                                <rect key="frame" x="16" y="59" width="361" height="42"/>
+                                <rect key="frame" x="16" y="20" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="eVa-eO-ufd"/>
                                 </constraints>
@@ -76,31 +25,80 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-wy-RiS">
-                                <rect key="frame" x="0.0" y="109" width="393" height="585"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="469"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-5d-5Ml">
+                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cen-1q-vuV">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="48"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-Xa-rcz">
+                                        <rect key="frame" x="94" y="0.0" width="93.5" height="48"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.right" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-UD-fAn">
+                                        <rect key="frame" x="187.5" y="0.0" width="94" height="48"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrow.circlepath" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-qW-hbf">
+                                        <rect key="frame" x="281.5" y="0.0" width="93.5" height="48"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="scope" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="2Yj-f6-JcN"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-IF-V6C" customClass="RoundedButton" customModule="Auto_Clicker_App" customModuleProvider="target">
+                                <rect key="frame" x="32" y="555" width="311" height="48"/>
+                                <color key="backgroundColor" name="Red Gradient One"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="HTK-82-bTM"/>
+                                    <constraint firstAttribute="height" constant="48" id="rkY-ax-oi8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Let's start">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="SFPro-Semibold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAz-Qh-Zd4"/>
-                        <color key="backgroundColor" name="Background Gradient One"/>
                         <constraints>
-                            <constraint firstItem="OV2-82-8Mj" firstAttribute="trailing" secondItem="XAz-Qh-Zd4" secondAttribute="trailing" id="5cG-7g-wDt"/>
+                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="centerX" secondItem="XAz-Qh-Zd4" secondAttribute="centerX" id="AUS-UM-TOY"/>
                             <constraint firstItem="9fP-YQ-k8a" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" constant="16" id="KGX-g1-Vmu"/>
-                            <constraint firstItem="OV2-82-8Mj" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="Rwh-SW-c0h"/>
                             <constraint firstItem="9fP-YQ-k8a" firstAttribute="top" secondItem="XAz-Qh-Zd4" secondAttribute="top" id="T7s-bx-eEu"/>
-                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="bottom" secondItem="OV2-82-8Mj" secondAttribute="bottom" id="XRC-Sc-SYq"/>
+                            <constraint firstItem="Rvm-IF-V6C" firstAttribute="top" secondItem="Gdh-wy-RiS" secondAttribute="bottom" constant="16" id="WJX-uI-cAG"/>
+                            <constraint firstItem="gRu-5d-5Ml" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="Wgj-a3-aQy"/>
                             <constraint firstItem="Gdh-wy-RiS" firstAttribute="top" secondItem="9fP-YQ-k8a" secondAttribute="bottom" constant="8" id="Zpg-4q-6LA"/>
+                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="gRu-5d-5Ml" secondAttribute="trailing" id="eGN-hR-uJt"/>
                             <constraint firstItem="Gdh-wy-RiS" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="n2P-qu-hjX"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="9fP-YQ-k8a" secondAttribute="trailing" constant="16" id="ofu-ew-six"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="Gdh-wy-RiS" secondAttribute="trailing" id="pBs-Jd-n0K"/>
-                            <constraint firstItem="OV2-82-8Mj" firstAttribute="top" secondItem="Gdh-wy-RiS" secondAttribute="bottom" id="wcx-qs-NGi"/>
+                            <constraint firstItem="XAz-Qh-Zd4" firstAttribute="bottom" secondItem="gRu-5d-5Ml" secondAttribute="bottom" id="pGa-a4-fjV"/>
+                            <constraint firstItem="gRu-5d-5Ml" firstAttribute="top" secondItem="Rvm-IF-V6C" secondAttribute="bottom" constant="16" id="znd-qJ-CVj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="Rvm-IF-V6C" id="eqk-s4-PZJ"/>
+                        <outlet property="startButton" destination="Rvm-IF-V6C" id="De3-Cv-BDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-B1-x4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,11 +111,8 @@
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="scope" catalog="system" width="128" height="124"/>
-        <namedColor name="Background Gradient One">
-            <color red="0.20000000000000001" green="0.16078431372549021" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="PurpleLightApp">
-            <color red="0.76078431372549016" green="0.56470588235294117" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="Red Gradient One">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
