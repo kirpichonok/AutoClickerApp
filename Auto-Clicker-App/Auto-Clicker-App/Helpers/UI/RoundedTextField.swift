@@ -1,6 +1,6 @@
 import UIKit
 
-class RoundedTextField: UITextField {
+final class RoundedTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
