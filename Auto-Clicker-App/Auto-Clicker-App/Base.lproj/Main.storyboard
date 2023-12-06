@@ -36,22 +36,22 @@
                                 <rect key="frame" x="0.0" y="770" width="393" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cen-1q-vuV">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp4-Xa-rcz">
-                                        <rect key="frame" x="94" y="0.0" width="93.5" height="48"/>
+                                        <rect key="frame" x="98.333333333333343" y="0.0" width="98.333333333333343" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.right" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-UD-fAn">
-                                        <rect key="frame" x="187.5" y="0.0" width="94" height="48"/>
+                                        <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="arrow.circlepath" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-qW-hbf">
-                                        <rect key="frame" x="281.5" y="0.0" width="93.5" height="48"/>
+                                        <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="scope" catalog="system"/>
                                     </button>
@@ -98,7 +98,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="cen-1q-vuV" id="6nm-mQ-g5M"/>
+                        <outlet property="goForwardButton" destination="Qp4-Xa-rcz" id="GOu-AX-CWW"/>
+                        <outlet property="refreshButton" destination="PnA-qW-hbf" id="sdt-39-GfS"/>
+                        <outlet property="settingsButton" destination="23Y-UD-fAn" id="ifa-o5-1Id"/>
                         <outlet property="startButton" destination="Rvm-IF-V6C" id="De3-Cv-BDc"/>
+                        <outlet property="textFieldView" destination="9fP-YQ-k8a" id="ylG-8b-9eR"/>
+                        <outlet property="webView" destination="Gdh-wy-RiS" id="aEv-X9-xr6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-B1-x4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
