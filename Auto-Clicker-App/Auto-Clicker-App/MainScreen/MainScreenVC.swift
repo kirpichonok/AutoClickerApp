@@ -9,6 +9,7 @@ final class MainScreenVC: UIViewController {
     @IBOutlet private var goForwardButton: UIButton!
     @IBOutlet private var settingsButton: UIButton!
     @IBOutlet private var refreshButton: UIButton!
+    @IBOutlet private var pointView: UIImageView!
 
     @IBOutlet private var textFieldView: RoundedTextField!
     @IBOutlet private var webView: WKWebView!
