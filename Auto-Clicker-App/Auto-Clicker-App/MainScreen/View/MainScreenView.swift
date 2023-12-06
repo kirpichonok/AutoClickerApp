@@ -2,7 +2,7 @@ import Combine
 import UIKit
 import WebKit
 
-final class MainScreenVC: UIViewController {
+final class MainScreenView: UIViewController {
     // MARK: - Properties
 
     @IBOutlet private var startButton: RoundedButton!
@@ -93,7 +93,7 @@ final class MainScreenVC: UIViewController {
 
 // MARK: - UITextFieldDelegate
 
-extension MainScreenVC: UITextFieldDelegate {
+extension MainScreenView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
 
@@ -108,7 +108,7 @@ extension MainScreenVC: UITextFieldDelegate {
 
 // MARK: - WKNavigationDelegate
 
-extension MainScreenVC: WKNavigationDelegate {
+extension MainScreenView: WKNavigationDelegate {
     // swiftlint:disable implicitly_unwrapped_optional
     func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
         // swiftlint:enable implicitly_unwrapped_optional
