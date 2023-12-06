@@ -53,7 +53,8 @@
 		190042DA2B1E010100199D11 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				191E10A32B596A5F00707733 /* MainScreenVC.swift */,
+				191E10A72B597A9A00707733 /* MainScreenVC.swift */,
+				19224DA42B202966006C9113 /* MainScreenVM.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";

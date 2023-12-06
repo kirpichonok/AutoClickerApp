@@ -106,6 +106,7 @@
                     <connections>
                         <outlet property="backButton" destination="cen-1q-vuV" id="6nm-mQ-g5M"/>
                         <outlet property="goForwardButton" destination="Qp4-Xa-rcz" id="GOu-AX-CWW"/>
+                        <outlet property="pointView" destination="su7-xH-3nf" id="qWv-UW-VPx"/>
                         <outlet property="refreshButton" destination="PnA-qW-hbf" id="sdt-39-GfS"/>
                         <outlet property="settingsButton" destination="23Y-UD-fAn" id="ifa-o5-1Id"/>
                         <outlet property="startButton" destination="Rvm-IF-V6C" id="De3-Cv-BDc"/>
