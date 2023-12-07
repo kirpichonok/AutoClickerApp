@@ -37,7 +37,7 @@ class MainScreenVM: ObservableObject {
                     return "https://" + urlString
                 }
 
-                return urlString
+                return urlString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
             }
             .assign(to: \.urlString, on: self)
             .store(in: &cancellables)
