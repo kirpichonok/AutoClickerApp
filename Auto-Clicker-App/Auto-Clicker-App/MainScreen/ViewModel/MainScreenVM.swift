@@ -37,7 +37,7 @@ class MainScreenVM {
                     return "https://" + urlString
                 }
 
-                return urlString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+                return urlString
             }
             .assign(to: \.urlString, on: self)
             .store(in: &cancellables)
