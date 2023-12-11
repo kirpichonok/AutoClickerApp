@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI1-hy-epZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pXs-3v-wQg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -105,8 +104,6 @@
                             <constraint firstItem="gRu-5d-5Ml" firstAttribute="top" secondItem="Rvm-IF-V6C" secondAttribute="bottom" constant="16" id="znd-qJ-CVj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NfO-RB-6Ck"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="goBackButton" destination="cen-1q-vuV" id="6nm-mQ-g5M"/>
                         <outlet property="goForwardButton" destination="Qp4-Xa-rcz" id="GOu-AX-CWW"/>
@@ -119,39 +116,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-B1-x4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="481.67938931297709" y="-480.98591549295776"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yDm-tg-L2p">
-            <objects>
-                <viewController id="BCh-rn-aUE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VIe-s9-aWh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="wi4-5p-eCR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Adk-fp-OBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1553.4351145038167" y="-481.69014084507046"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="uRr-af-r7g">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lI1-hy-epZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t8y-dE-GJN">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pXs-3v-wQg" kind="relationship" relationship="rootViewController" id="3rN-yC-gOd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ard-zZ-Rg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-445.03816793893128" y="-480.98591549295776"/>
         </scene>
