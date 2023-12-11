@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,15 +59,18 @@
                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="scope" catalog="system"/>
+                                        <connections>
+                                            <segue destination="BCh-rn-aUE" kind="presentation" id="J7c-rc-TGG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="2Yj-f6-JcN"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-IF-V6C" customClass="RoundedButton" customModule="Auto_Clicker_App" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-IF-V6C">
                                 <rect key="frame" x="41" y="706" width="311" height="48"/>
-                                <color key="backgroundColor" name="Red Gradient One"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="HTK-82-bTM"/>
                                     <constraint firstAttribute="height" constant="48" id="rkY-ax-oi8"/>
@@ -109,8 +111,8 @@
                         <outlet property="goBackButton" destination="cen-1q-vuV" id="6nm-mQ-g5M"/>
                         <outlet property="goForwardButton" destination="Qp4-Xa-rcz" id="GOu-AX-CWW"/>
                         <outlet property="pointView" destination="su7-xH-3nf" id="qWv-UW-VPx"/>
-                        <outlet property="refreshButton" destination="PnA-qW-hbf" id="sdt-39-GfS"/>
-                        <outlet property="settingsButton" destination="23Y-UD-fAn" id="ifa-o5-1Id"/>
+                        <outlet property="refreshButton" destination="23Y-UD-fAn" id="XuS-Iy-ncH"/>
+                        <outlet property="settingsButton" destination="PnA-qW-hbf" id="UuB-eb-e8f"/>
                         <outlet property="startButton" destination="Rvm-IF-V6C" id="De3-Cv-BDc"/>
                         <outlet property="textFieldView" destination="9fP-YQ-k8a" id="ylG-8b-9eR"/>
                         <outlet property="webView" destination="Gdh-wy-RiS" id="aEv-X9-xr6"/>
@@ -160,9 +162,9 @@
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="scope" catalog="system" width="128" height="124"/>
         <image name="dot.scope" catalog="system" width="128" height="124"/>
-        <namedColor name="Red Gradient One">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

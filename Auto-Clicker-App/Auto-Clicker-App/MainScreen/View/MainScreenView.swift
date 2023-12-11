@@ -5,7 +5,7 @@ import WebKit
 final class MainScreenView: UIViewController {
     // MARK: - Properties
 
-    @IBOutlet private var startButton: RoundedButton!
+    @IBOutlet private var startButton: UIButton!
     @IBOutlet private var goBackButton: UIButton!
     @IBOutlet private var goForwardButton: UIButton!
     @IBOutlet private var settingsButton: UIButton!
@@ -94,8 +94,8 @@ final class MainScreenView: UIViewController {
     // MARK: - Private Methods
 
     private func viewSetup() {
-        startButton.setGradientBackground(with: Gradient.purple)
         (view as? GradientBackgroundView)?.setGradientBackground(with: Gradient.background)
+        startButton.configuration = UIButton.Configuration.capsuleWithBackground(gradient: Gradient.purple)
         pointView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
         webView.allowsBackForwardNavigationGestures = true
     }
@@ -167,9 +167,7 @@ extension MainScreenView: UITextFieldDelegate {
 // MARK: - WKNavigationDelegate
 
 extension MainScreenView: WKNavigationDelegate {
-    // swiftlint:disable implicitly_unwrapped_optional
     func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
-        // swiftlint:enable implicitly_unwrapped_optional
         textFieldView.text = webView.url?.absoluteString
     }
 }
