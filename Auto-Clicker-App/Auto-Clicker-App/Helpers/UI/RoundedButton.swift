@@ -13,28 +13,14 @@ final class RoundedButton: UIButton {
         viewSetup()
     }
 
-    // MARK: - Method
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        gradientLayer.frame = bounds
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
     }
 
-    func setGradientBackground(with colors: [CGColor]) {
-        gradientLayer.colors = colors
-        setNeedsLayout()
-    }
-
-    // MARK: - Private property
-
-    private let gradientLayer = CAGradientLayer()
-
-    // MARK: - Private method
+    // MARK: - Private methods
 
     private func viewSetup() {
         layer.cornerRadius = bounds.size.height / 2
         clipsToBounds = true
-        gradientLayer.frame = bounds
-        layer.addSublayer(gradientLayer)
     }
 }
