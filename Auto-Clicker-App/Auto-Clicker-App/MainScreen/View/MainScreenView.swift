@@ -94,8 +94,8 @@ final class MainScreenView: UIViewController {
     // MARK: - Private Methods
 
     private func viewSetup() {
-        insertGradientScreenBackground()
         startButton.setGradientBackground(with: Gradient.purple)
+        (view as? GradientBackgroundView)?.setGradientBackground(with: Gradient.background)
         pointView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
         webView.allowsBackForwardNavigationGestures = true
     }

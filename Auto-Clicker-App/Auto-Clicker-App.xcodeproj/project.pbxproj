@@ -19,6 +19,7 @@
 		19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA02B14E3940053F1C5 /* Main.storyboard */; };
 		19BBBDA42B14E3960053F1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA32B14E3960053F1C5 /* Assets.xcassets */; };
 		19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBDE822B1DA37900824BBE /* Gradient.swift */; };
+		19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		19BBBDA32B14E3960053F1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19BBBDA82B14E3960053F1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BBDE822B1DA37900824BBE /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,9 @@
 				193CC4862B5CD64400352A44 /* RoundedButton.swift */,
 				193CC4882B5CD64400352A44 /* RoundedTextField.swift */,
 				19BBDE822B1DA37900824BBE /* Gradient.swift */,
+				19057FA02B1DCF92006D94E2 /* RoundedButton.swift */,
+				19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */,
+				190042B02B1DF61700199D11 /* RoundedTextField.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				191E10AB2B59940600707733 /* String+K.swift in Sources */,
 				19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */,
 				19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */,
+				19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */,
 				190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */,
 				193CC4892B5CD64400352A44 /* RoundedButton.swift in Sources */,
 				19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */,

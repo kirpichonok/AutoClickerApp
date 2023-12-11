@@ -13,7 +13,7 @@
         <scene sceneID="CYh-Zx-d4a">
             <objects>
                 <viewController id="pXs-3v-wQg" customClass="MainScreenView" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yO7-yP-vYJ">
+                    <view key="view" contentMode="scaleToFill" id="yO7-yP-vYJ" customClass="GradientBackgroundView" customModule="Auto_Clicker_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
