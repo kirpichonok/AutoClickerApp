@@ -1,8 +1,8 @@
 import Foundation
 
-class PointsGeneratorModel {
+final class PointsGeneratorModel {
     /// Point to be updated over time.
-    @Published var point: CGPoint?
+    @Published private(set) var point: CGPoint?
 
     /// Generates a certain amount of points with a certain time interval.
     ///
