@@ -1,8 +1,16 @@
 import Foundation
 
 final class PointsGeneratorModel {
+    // MARK: - Properties
+
     /// Point to be updated over time.
     @Published private(set) var point: CGPoint?
+
+    private var counter = 3
+    private var timeInterval = 2.0
+    private var timer: Timer?
+
+    // MARK: - Methods
 
     /// Generates a certain amount of points with a certain time interval.
     ///
@@ -23,12 +31,6 @@ final class PointsGeneratorModel {
             point = coordinates
         }
     }
-
-    // MARK: - Private
-
-    private var counter = 3
-    private var timeInterval = 2.0
-    private var timer: Timer?
 
     private func reset() {
         timer?.invalidate()
