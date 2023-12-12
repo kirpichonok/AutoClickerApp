@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -139,13 +140,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Pointers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB2-7h-6sf">
                                                         <rect key="frame" x="0.0" y="0.0" width="290.33333333333331" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 point" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-aM-01o">
                                                         <rect key="frame" x="310.33333333333331" y="0.0" width="50.666666666666686" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -170,13 +171,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Pointers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dld-Ow-Je9">
                                                         <rect key="frame" x="0.0" y="0.0" width="260.66666666666669" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 times" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJx-FJ-6cU">
                                                         <rect key="frame" x="280.66666666666669" y="0.0" width="80.333333333333314" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -201,13 +202,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Interval time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-rw-Nxv">
                                                         <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-2H-hLu">
                                                         <rect key="frame" x="311.33333333333331" y="0.0" width="49.666666666666686" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -225,20 +226,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvg-zD-Pue">
-                                <rect key="frame" x="152" y="336" width="89" height="33"/>
-                                <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Let's Start!"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wi4-5p-eCR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background Gradient One"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qx6-mz-Fzl" secondAttribute="trailing" constant="16" id="NpC-Se-GAQ"/>
                             <constraint firstItem="qx6-mz-Fzl" firstAttribute="top" secondItem="wi4-5p-eCR" secondAttribute="top" constant="20" id="OXI-cq-xVJ"/>
-                            <constraint firstItem="dvg-zD-Pue" firstAttribute="centerX" secondItem="wi4-5p-eCR" secondAttribute="centerX" id="WNW-m8-q6w"/>
-                            <constraint firstItem="dvg-zD-Pue" firstAttribute="top" secondItem="qx6-mz-Fzl" secondAttribute="bottom" constant="24" id="bct-MX-PqL"/>
                             <constraint firstItem="qx6-mz-Fzl" firstAttribute="leading" secondItem="wi4-5p-eCR" secondAttribute="leading" constant="16" id="sAM-uW-8y6"/>
                         </constraints>
                     </view>
@@ -250,7 +243,6 @@
                         <outlet property="numberOfClicksSlider" destination="9Qt-29-eBo" id="kd0-yZ-uID"/>
                         <outlet property="numberOfPointersLabel" destination="Pdr-aM-01o" id="4AV-qh-6oU"/>
                         <outlet property="numberOfPointersSlider" destination="unh-Rt-1R2" id="ZPG-oL-bnE"/>
-                        <outlet property="startButton" destination="dvg-zD-Pue" id="8qR-lR-Cjc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adk-fp-OBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -280,11 +272,11 @@
         <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="scope" catalog="system" width="128" height="124"/>
         <image name="dot.scope" catalog="system" width="128" height="124"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="scope" catalog="system" width="128" height="124"/>
+        <namedColor name="Background Gradient One">
+            <color red="0.20000000000000001" green="0.16078431372549021" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

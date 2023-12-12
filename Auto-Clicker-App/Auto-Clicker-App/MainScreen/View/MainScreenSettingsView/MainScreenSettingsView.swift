@@ -11,8 +11,6 @@ class MainScreenSettingsView: UIViewController {
     @IBOutlet private var numberOfClicksSlider: UISlider!
     @IBOutlet private var intervalTimeSlider: UISlider!
 
-    @IBOutlet private var startButton: UIButton!
-
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -24,6 +22,5 @@ class MainScreenSettingsView: UIViewController {
 
     private func viewSetup() {
         (view.layer as? CAGradientLayer)?.colors = Gradient.background
-        startButton.configuration = .capsuleWithBackground(gradient: Gradient.purple)
     }
 }
