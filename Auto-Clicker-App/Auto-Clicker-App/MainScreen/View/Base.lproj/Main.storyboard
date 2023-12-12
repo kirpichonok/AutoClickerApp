@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-YQ-k8a" customClass="RoundedTextField" customModule="Auto_Clicker_App" customModuleProvider="target">
-                                <rect key="frame" x="16" y="103" width="361" height="42"/>
+                                <rect key="frame" x="16" y="59" width="361" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="eVa-eO-ufd"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-wy-RiS">
-                                <rect key="frame" x="0.0" y="153" width="393" height="537"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="581"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -67,7 +67,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="scope" catalog="system"/>
                                         <connections>
-                                            <segue destination="BCh-rn-aUE" kind="presentation" id="J7c-rc-TGG"/>
+                                            <segue destination="JGC-8P-xx1" kind="presentation" id="PCw-RV-GAm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -105,6 +105,7 @@
                             <constraint firstItem="gRu-5d-5Ml" firstAttribute="top" secondItem="Rvm-IF-V6C" secondAttribute="bottom" constant="16" id="znd-qJ-CVj"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="goBackButton" destination="cen-1q-vuV" id="6nm-mQ-g5M"/>
                         <outlet property="goForwardButton" destination="Qp4-Xa-rcz" id="GOu-AX-CWW"/>
@@ -235,6 +236,7 @@
                             <constraint firstItem="qx6-mz-Fzl" firstAttribute="leading" secondItem="wi4-5p-eCR" secondAttribute="leading" constant="16" id="sAM-uW-8y6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Auto Clicker Settings" id="K4p-BT-wup"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="intervalTimeLabel" destination="Z66-2H-hLu" id="uzw-DE-NVY"/>
@@ -247,15 +249,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adk-fp-OBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553.4351145038167" y="-481.69014084507046"/>
+            <point key="canvasLocation" x="2480.1526717557249" y="-481.69014084507046"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uRr-af-r7g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lI1-hy-epZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lI1-hy-epZ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t8y-dE-GJN">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -266,6 +268,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ard-zZ-Rg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-445.03816793893128" y="-480.98591549295776"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RKp-jZ-XV7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JGC-8P-xx1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cQM-gN-Cix">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BCh-rn-aUE" kind="relationship" relationship="rootViewController" id="vFC-6S-0Jg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aj-Jk-TB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553.4351145038167" y="-481.69014084507046"/>
         </scene>
     </scenes>
     <resources>
