@@ -122,28 +122,28 @@
         <!--Auto Clicker Settings-->
         <scene sceneID="yDm-tg-L2p">
             <objects>
-                <viewController title="Auto Clicker Settings" id="BCh-rn-aUE" sceneMemberID="viewController">
+                <viewController title="Auto Clicker Settings" id="BCh-rn-aUE" customClass="MainScreenSettingsView" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VIe-s9-aWh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="qx6-mz-Fzl">
-                                <rect key="frame" x="16" y="76" width="361" height="234"/>
+                                <rect key="frame" x="16" y="76" width="361" height="236"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fvu-Uo-nqB">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="56.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="57.333333333333336"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-ro-mO9">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="18.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Pointers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB2-7h-6sf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="18.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="290.33333333333331" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 point" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-aM-01o">
-                                                        <rect key="frame" x="311.33333333333331" y="0.0" width="49.666666666666686" height="18.666666666666668"/>
+                                                        <rect key="frame" x="310.33333333333331" y="0.0" width="50.666666666666686" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -157,24 +157,24 @@
                                                 </constraints>
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="unh-Rt-1R2">
-                                                <rect key="frame" x="-2" y="26.666666666666671" width="365" height="31"/>
+                                                <rect key="frame" x="-2" y="27.333333333333329" width="365" height="31"/>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-Ef-coc">
-                                        <rect key="frame" x="0.0" y="88.666666666666657" width="361" height="56.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="89.333333333333343" width="361" height="57.333333333333343"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-aJ-bLp">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="18.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Pointers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dld-Ow-Je9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="262" height="18.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="260.66666666666669" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 times" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJx-FJ-6cU">
-                                                        <rect key="frame" x="282" y="0.0" width="79" height="18.666666666666668"/>
+                                                        <rect key="frame" x="280.66666666666669" y="0.0" width="80.333333333333314" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -188,24 +188,24 @@
                                                 </constraints>
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Qt-29-eBo">
-                                                <rect key="frame" x="-2" y="26.666666666666686" width="365" height="31"/>
+                                                <rect key="frame" x="-2" y="27.333333333333314" width="365" height="31"/>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FVu-FB-RTc">
-                                        <rect key="frame" x="0.0" y="177.33333333333334" width="361" height="56.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="178.66666666666666" width="361" height="57.333333333333343"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GoP-is-2F4">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="18.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Interval time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-rw-Nxv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="293.33333333333331" height="18.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-2H-hLu">
-                                                        <rect key="frame" x="313.33333333333331" y="0.0" width="47.666666666666686" height="18.666666666666668"/>
+                                                        <rect key="frame" x="311.33333333333331" y="0.0" width="49.666666666666686" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -219,14 +219,14 @@
                                                 </constraints>
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-5w-Dmz">
-                                                <rect key="frame" x="-2" y="26.666666666666657" width="365" height="31"/>
+                                                <rect key="frame" x="-2" y="27.333333333333343" width="365" height="31"/>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvg-zD-Pue">
-                                <rect key="frame" x="155" y="334" width="83" height="32"/>
+                                <rect key="frame" x="152" y="336" width="89" height="33"/>
                                 <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Let's Start!"/>
