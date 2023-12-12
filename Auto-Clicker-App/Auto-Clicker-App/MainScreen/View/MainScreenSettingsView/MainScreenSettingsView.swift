@@ -30,7 +30,7 @@ class MainScreenSettingsView: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "SFPro-Semibold", size: 18),
+            NSAttributedString.Key.font: UIFont(SFProSemiBold: 18),
         ]
         navigationController?.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key: Any]
     }

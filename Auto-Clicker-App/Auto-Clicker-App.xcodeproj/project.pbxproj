@@ -10,6 +10,7 @@
 		190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190042B22B1DF7CB00199D11 /* MainScreenView.swift */; };
 		191E10AB2B59940600707733 /* String+K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E10AA2B59940500707733 /* String+K.swift */; };
 		19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19224DA42B202966006C9113 /* MainScreenVM.swift */; };
+		194AA9132B288A5B006FC26F /* UIFont+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194AA9122B288A5B006FC26F /* UIFont+init.swift */; };
 		193CC49B2B5CDA1800352A44 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4992B5CDA1700352A44 /* PreviewContainer.swift */; };
 		193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */; };
 		195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */; };
@@ -29,6 +30,7 @@
 		190042B22B1DF7CB00199D11 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		191E10AA2B59940500707733 /* String+K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+K.swift"; sourceTree = "<group>"; };
 		19224DA42B202966006C9113 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
+		194AA9122B288A5B006FC26F /* UIFont+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+init.swift"; sourceTree = "<group>"; };
 		193CC4992B5CDA1700352A44 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsGeneratorModel.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		19CEB2AD2B27245900EDF9BF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				194AA9122B288A5B006FC26F /* UIFont+init.swift */,
 				19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */,
 				19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */,
 			);
@@ -293,6 +296,7 @@
 				195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */,
 				191E109F2B5966CB00707733 /* PreviewContainer.swift in Sources */,
 				19CAA1982B28378E0040BEEF /* MainScreenSettingsView.swift in Sources */,
+				194AA9132B288A5B006FC26F /* UIFont+init.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
