@@ -1,7 +1,7 @@
 import UIKit
 
 class MainScreenSettingsView: UIViewController {
-    // MARK: - IBOutlets
+    // MARK: - Private properties
 
     @IBOutlet private var numberOfPointersLabel: UILabel!
     @IBOutlet private var numberOfClicksLabel: UILabel!
@@ -18,9 +18,20 @@ class MainScreenSettingsView: UIViewController {
         viewSetup()
     }
 
-    // MARK: - Actions
+    // MARK: - Private methods
 
     private func viewSetup() {
         (view.layer as? CAGradientLayer)?.colors = Gradient.background
+        navigationBarSetup()
+    }
+
+    private func navigationBarSetup() {
+        let imageView = UIImageView(image: UIImage(systemName: .K.xmarkImageName))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "SFPro-Semibold", size: 18),
+        ]
+        navigationController?.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key: Any]
     }
 }

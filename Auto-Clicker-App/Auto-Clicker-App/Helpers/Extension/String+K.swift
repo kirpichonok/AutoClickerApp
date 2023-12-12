@@ -5,5 +5,6 @@ extension String {
         static let chevronRightImageName = "chevron.right"
         static let scopeImageName = "scope"
         static let arrowCirclePathImageName = "arrow.circlepath"
+        static let xmarkImageName = "xmark"
     }
 }
