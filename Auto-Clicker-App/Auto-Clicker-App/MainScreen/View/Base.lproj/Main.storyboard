@@ -123,7 +123,7 @@
         <scene sceneID="yDm-tg-L2p">
             <objects>
                 <viewController title="Auto Clicker Settings" id="BCh-rn-aUE" customClass="MainScreenSettingsView" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VIe-s9-aWh">
+                    <view key="view" contentMode="scaleToFill" id="VIe-s9-aWh" customClass="GradientBackgroundView" customModule="Auto_Clicker_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -243,6 +243,15 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="intervalTimeLabel" destination="Z66-2H-hLu" id="uzw-DE-NVY"/>
+                        <outlet property="intervalTimeSlider" destination="Ydk-5w-Dmz" id="kBK-e6-Jc9"/>
+                        <outlet property="numberOfClicksLabel" destination="nJx-FJ-6cU" id="nGM-rM-0wj"/>
+                        <outlet property="numberOfClicksSlider" destination="9Qt-29-eBo" id="kd0-yZ-uID"/>
+                        <outlet property="numberOfPointersLabel" destination="Pdr-aM-01o" id="4AV-qh-6oU"/>
+                        <outlet property="numberOfPointersSlider" destination="unh-Rt-1R2" id="ZPG-oL-bnE"/>
+                        <outlet property="startButton" destination="dvg-zD-Pue" id="8qR-lR-Cjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adk-fp-OBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
