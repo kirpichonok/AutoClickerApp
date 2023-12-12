@@ -10,9 +10,10 @@
 		190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190042B22B1DF7CB00199D11 /* MainScreenView.swift */; };
 		191E10AB2B59940600707733 /* String+K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E10AA2B59940500707733 /* String+K.swift */; };
 		19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19224DA42B202966006C9113 /* MainScreenVM.swift */; };
-		193CC4952B5CD8FB00352A44 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4922B5CD8FB00352A44 /* RoundedTextField.swift */; };
-		193CC4972B5CD8FB00352A44 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4942B5CD8FB00352A44 /* PreviewContainer.swift */; };
+		193CC49B2B5CDA1800352A44 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4992B5CDA1700352A44 /* PreviewContainer.swift */; };
+		193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */; };
 		195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */; };
+		197872A02B282D880034B77D /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1978729F2B282D880034B77D /* SF-Pro.ttf */; };
 		19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */; };
 		19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */; };
 		19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA02B14E3940053F1C5 /* Main.storyboard */; };
@@ -27,9 +28,10 @@
 		190042B22B1DF7CB00199D11 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		191E10AA2B59940500707733 /* String+K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+K.swift"; sourceTree = "<group>"; };
 		19224DA42B202966006C9113 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
-		193CC4922B5CD8FB00352A44 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
-		193CC4942B5CD8FB00352A44 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		193CC4992B5CDA1700352A44 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsGeneratorModel.swift; sourceTree = "<group>"; };
+		1978729F2B282D880034B77D /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		19BBBD972B14E3940053F1C5 /* Auto-Clicker-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto-Clicker-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		193DB0FF2B282FD000F4D4F4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1978729F2B282D880034B77D /* SF-Pro.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		19BBBD8E2B14E3940053F1C5 = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +147,9 @@
 		19BBDE852B1DA38700824BBE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				193CC4942B5CD8FB00352A44 /* PreviewContainer.swift */,
-				193CC4922B5CD8FB00352A44 /* RoundedTextField.swift */,
+				193CC4992B5CDA1700352A44 /* PreviewContainer.swift */,
+				193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */,
+				193DB0FF2B282FD000F4D4F4 /* Font */,
 				19BBDE822B1DA37900824BBE /* Gradient.swift */,
 				19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */,
 				19CEB2AD2B27245900EDF9BF /* Extension */,
@@ -215,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BBBDA42B14E3960053F1C5 /* Assets.xcassets in Resources */,
+				197872A02B282D880034B77D /* SF-Pro.ttf in Resources */,
 				19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,14 +260,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193CC49B2B5CDA1800352A44 /* PreviewContainer.swift in Sources */,
 				191E10AB2B59940600707733 /* String+K.swift in Sources */,
 				19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */,
 				19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */,
-				193CC4952B5CD8FB00352A44 /* RoundedTextField.swift in Sources */,
 				19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */,
 				19CEB2B12B27433A00EDF9BF /* UIButton+Configuration.swift in Sources */,
 				190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */,
-				193CC4972B5CD8FB00352A44 /* PreviewContainer.swift in Sources */,
+				193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */,
 				19CEB2AC2B27243D00EDF9BF /* UIView+setGradientBackground.swift in Sources */,
 				19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */,
 				19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */,
