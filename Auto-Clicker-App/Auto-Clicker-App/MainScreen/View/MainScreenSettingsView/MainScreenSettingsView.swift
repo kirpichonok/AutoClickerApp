@@ -11,6 +11,8 @@ final class MainScreenSettingsView: UIViewController {
     @IBOutlet private var numberOfClicksSlider: UISlider!
     @IBOutlet private var intervalTimeSlider: UISlider!
 
+    private let titleFontSize: CGFloat = 18
+
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -30,7 +32,7 @@ final class MainScreenSettingsView: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.whiteApp,
-            NSAttributedString.Key.font: UIFont.appSemibold(size: 18),
+            NSAttributedString.Key.font: UIFont.appSemibold(size: titleFontSize),
         ]
         navigationController?.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key: Any]
     }
