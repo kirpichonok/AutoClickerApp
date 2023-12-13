@@ -17,13 +17,13 @@
 		197872A02B282D880034B77D /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1978729F2B282D880034B77D /* SF-Pro.ttf */; };
 		19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */; };
 		19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */; };
-		19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA02B14E3940053F1C5 /* Main.storyboard */; };
 		19BBBDA42B14E3960053F1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA32B14E3960053F1C5 /* Assets.xcassets */; };
 		19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBDE822B1DA37900824BBE /* Gradient.swift */; };
 		19CAA1982B28378E0040BEEF /* MainScreenSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA1972B28378E0040BEEF /* MainScreenSettingsView.swift */; };
 		19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */; };
 		19CEB2AC2B27243D00EDF9BF /* UIView+setGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */; };
 		19CEB2B12B27433A00EDF9BF /* UIButton+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */; };
+		19D2D8EE2B59A0DA00C2CF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D2D8EC2B59A0DA00C2CF7D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,6 @@
 		19BBBD972B14E3940053F1C5 /* Auto-Clicker-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto-Clicker-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19BBBDA12B14E3940053F1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19BBBDA32B14E3960053F1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19BBBDA82B14E3960053F1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BBDE822B1DA37900824BBE /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setGradientBackground.swift"; sourceTree = "<group>"; };
 		19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Configuration.swift"; sourceTree = "<group>"; };
+		19D2D8ED2B59A0DA00C2CF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,7 @@
 		190042DA2B1E010100199D11 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				19D2D8EC2B59A0DA00C2CF7D /* Main.storyboard */,
 				19224DA62B20B1C8006C9113 /* View */,
 				19224DA72B20B1D6006C9113 /* ViewModel */,
 				195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */,
@@ -89,7 +90,6 @@
 			children = (
 				19CAA1962B28375F0040BEEF /* MainScreenView */,
 				19CAA1992B2837AB0040BEEF /* MainScreenSettingsView */,
-				19BBBDA02B14E3940053F1C5 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 			files = (
 				19BBBDA42B14E3960053F1C5 /* Assets.xcassets in Resources */,
 				197872A02B282D880034B77D /* SF-Pro.ttf in Resources */,
-				19BBBDA22B14E3940053F1C5 /* Main.storyboard in Resources */,
+				19D2D8EE2B59A0DA00C2CF7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +303,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		19BBBDA02B14E3940053F1C5 /* Main.storyboard */ = {
+		19D2D8EC2B59A0DA00C2CF7D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				19BBBDA12B14E3940053F1C5 /* Base */,
+				19D2D8ED2B59A0DA00C2CF7D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

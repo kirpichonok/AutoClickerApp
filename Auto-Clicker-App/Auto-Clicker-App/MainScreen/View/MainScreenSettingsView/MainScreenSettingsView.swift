@@ -29,7 +29,7 @@ class MainScreenSettingsView: UIViewController {
         let imageView = UIImageView(image: UIImage(systemName: .K.xmarkImageName))
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
         let attributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.foregroundColor: UIColor.whiteApp,
             NSAttributedString.Key.font: UIFont(SFProSemiBold: 18),
         ]
         navigationController?.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key: Any]
