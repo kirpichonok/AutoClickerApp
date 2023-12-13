@@ -24,6 +24,7 @@ final class MainScreenSettingsView: UIViewController {
 
     private func viewSetup() {
         (view.layer as? CAGradientLayer)?.colors = Gradient.background
+        sheetPresentationController?.prefersGrabberVisible = true
         navigationBarSetup()
     }
 
