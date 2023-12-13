@@ -28,12 +28,21 @@ final class MainScreenSettingsView: UIViewController {
     }
 
     private func navigationBarSetup() {
-        let imageView = UIImageView(image: UIImage(systemName: .K.xmarkImageName))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: imageView)
+        let rightItem = UIBarButtonItem(image: UIImage(systemName: .K.xmarkImageName),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(dismissScreen))
+        rightItem.tintColor = .whiteHalf
+        navigationItem.rightBarButtonItem = rightItem
+
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.whiteApp,
             NSAttributedString.Key.font: UIFont.appSemibold(size: titleFontSize),
         ]
         navigationController?.navigationBar.titleTextAttributes = attributes as [NSAttributedString.Key: Any]
+    }
+
+    @objc private func dismissScreen() {
+        dismiss(animated: true)
     }
 }
