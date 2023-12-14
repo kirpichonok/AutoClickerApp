@@ -5,6 +5,7 @@ import WebKit
 final class MainScreenView: UIViewController {
     // MARK: - IBOutlets
 
+    @IBOutlet private var startButtonWidth: NSLayoutConstraint!
     @IBOutlet private var startButton: UIButton!
     @IBOutlet private var goBackButton: UIButton!
     @IBOutlet private var goForwardButton: UIButton!
@@ -44,8 +45,12 @@ final class MainScreenView: UIViewController {
         }
     }
 
-    @objc private func pointersDidSet() {
-        viewModel.pointLocation = pointersViews.filter { !$0.isHidden }.map { $0.center }
+    @objc private func startButtonDidPressed() {
+        if viewModel.isGenerating {
+            viewModel.stopGenerating()
+        } else {
+            viewModel.pointLocation = pointersViews.filter { !$0.isHidden }.map { $0.center }
+        }
     }
 
     @objc private func goBack() {
@@ -60,7 +65,13 @@ final class MainScreenView: UIViewController {
         webView.reload()
     }
 
-    // MARK: - Private
+    // MARK: - Private properties
+
+    private var isLoading = false {
+        didSet {
+            startButtonSetup()
+        }
+    }
 
     private var cancellables = Set<AnyCancellable>()
     private var viewModel = MainScreenVM()
@@ -84,6 +95,32 @@ final class MainScreenView: UIViewController {
                 }
             }
         }
+    }
+
+    private var buttonWidth: CGFloat {
+        viewModel.isGenerating ?
+            startButton.frame.height :
+            311
+    }
+
+    // MARK: - Private methods
+
+    private func startButtonSetup() {
+        startButtonWidth.constant = isLoading ? startButton.bounds.height : 311
+
+        var didPressedConfiguration = UIButton.Configuration.borderedProminent()
+        didPressedConfiguration.image = UIImage(systemName: .K.stopFillImageName)
+        didPressedConfiguration.cornerStyle = .capsule
+        didPressedConfiguration.baseBackgroundColor = .systemRed
+        didPressedConfiguration.title = ""
+
+        var normalConfiguration = UIButton.Configuration.capsuleWithBackground(gradient: Gradient.purple)
+        normalConfiguration.title = "Let's start"
+        normalConfiguration.image = nil
+        normalConfiguration.baseForegroundColor = .accent
+
+        startButton.configuration = isLoading ? didPressedConfiguration : normalConfiguration
+        startButton.setNeedsLayout()
     }
 
     private func bindViewModel() {
@@ -111,11 +148,15 @@ final class MainScreenView: UIViewController {
         viewModel.$numberOfPointers
             .assign(to: \.numberOfVisiblePointers, on: self)
             .store(in: &cancellables)
+
+        viewModel.$isGenerating
+            .assign(to: \.isLoading, on: self)
+            .store(in: &cancellables)
     }
 
     private func viewSetup() {
         (view as? GradientBackgroundView)?.setGradientBackground(with: Gradient.background)
-        startButton.configuration = UIButton.Configuration.capsuleWithBackground(gradient: Gradient.purple)
+        startButtonSetup()
         webView.allowsBackForwardNavigationGestures = true
         pointersSetup()
     }
@@ -130,7 +171,7 @@ final class MainScreenView: UIViewController {
     }
 
     private func buttonsActionSetup() {
-        startButton.addTarget(self, action: #selector(pointersDidSet), for: .touchUpInside)
+        startButton.addTarget(self, action: #selector(startButtonDidPressed), for: .touchUpInside)
         goBackButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         goForwardButton.addTarget(self, action: #selector(goForward), for: .touchUpInside)
         refreshButton.addTarget(self, action: #selector(reloadPage), for: .touchUpInside)
@@ -189,9 +230,7 @@ extension MainScreenView: UITextFieldDelegate {
 // MARK: - WKNavigationDelegate
 
 extension MainScreenView: WKNavigationDelegate {
-    // swiftlint:disable implicitly_unwrapped_optional
     func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
-        // swiftlint:enable implicitly_unwrapped_optional
         textFieldView.text = webView.url?.absoluteString
     }
 }

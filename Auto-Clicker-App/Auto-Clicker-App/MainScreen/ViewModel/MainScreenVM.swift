@@ -7,9 +7,7 @@ class MainScreenVM {
     /// The point to simulate touches.
     var pointLocation = [CGPoint]() {
         didSet {
-            if !pointLocation.isEmpty {
-                model.generatePoints(with: pointLocation)
-            }
+            model.generatePoints(with: pointLocation)
         }
     }
 
@@ -19,6 +17,8 @@ class MainScreenVM {
     @MainActor @Published var numberOfPointers = 2
     /// Sets the desired number of displayed pointers, but not bigger than 5 and not less than 1.
     let numberOfPointersInput = PassthroughSubject<Int, Never>()
+
+    @MainActor @Published var isGenerating = false
 
     /// The string in the address line.
     @MainActor @Published var urlString: String? {
@@ -67,5 +67,19 @@ class MainScreenVM {
         }
         .assign(to: \.numberOfPointers, on: self)
         .store(in: &cancellables)
+
+        model.$isGenerating
+            .assign(to: \.isGenerating, on: self)
+            .store(in: &cancellables)
+    }
+
+    // MARK: - Methods
+
+    func startGenerating() {
+        model.generatePoints(with: pointLocation)
+    }
+
+    func stopGenerating() {
+        model.stopGenerating()
     }
 }

@@ -79,7 +79,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Let's start">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -132,6 +132,7 @@
                         <outlet property="refreshButton" destination="23Y-UD-fAn" id="XuS-Iy-ncH"/>
                         <outlet property="settingsButton" destination="PnA-qW-hbf" id="UuB-eb-e8f"/>
                         <outlet property="startButton" destination="Rvm-IF-V6C" id="De3-Cv-BDc"/>
+                        <outlet property="startButtonWidth" destination="HTK-82-bTM" id="CDa-7v-maL"/>
                         <outlet property="textFieldView" destination="9fP-YQ-k8a" id="ylG-8b-9eR"/>
                         <outlet property="webView" destination="Gdh-wy-RiS" id="aEv-X9-xr6"/>
                         <outletCollection property="pointersViews" destination="cdc-rf-bW3" collectionClass="NSMutableArray" id="4WB-f9-wTo"/>

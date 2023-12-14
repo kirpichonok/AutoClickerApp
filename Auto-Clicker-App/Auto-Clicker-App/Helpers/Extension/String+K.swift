@@ -8,5 +8,6 @@ extension String {
         static let arrowCirclePathImageName = "arrow.circlepath"
         static let xmarkImageName = "xmark"
         static let circleFillImageName = "circle.fill"
+        static let stopFillImageName = "stop.fill"
     }
 }

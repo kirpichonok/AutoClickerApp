@@ -20,11 +20,10 @@ final class PointsGeneratorModel {
     ///
     /// - Parameter coordinates: The list of coordinates for the points to be generated.
     func generatePoints(with coordinates: [CGPoint]) {
-        guard !coordinates.isEmpty else {
-            return
-        }
+        guard !coordinates.isEmpty else { return }
         timer?.invalidate()
         self.coordinates = coordinates
+        isGenerating = true
 
         timer = Timer.scheduledTimer(withTimeInterval: timeInterval,
                                      repeats: true) { [weak self] timer in
@@ -32,7 +31,6 @@ final class PointsGeneratorModel {
                 timer.invalidate()
                 return
             }
-            isGenerating = true
 
             if let nextPoint = next() {
                 self.point = nextPoint
@@ -42,8 +40,13 @@ final class PointsGeneratorModel {
         }
     }
 
+    func stopGenerating() {
+        reset()
+    }
+
     private func reset() {
         timer?.invalidate()
+        isGenerating = false
         counter = 3
         currentIndex = 0
     }
