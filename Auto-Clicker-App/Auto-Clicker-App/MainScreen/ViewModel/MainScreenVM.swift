@@ -15,6 +15,11 @@ class MainScreenVM {
 
     /// The point where the touch should be simulated.
     @MainActor @Published var touches: CGPoint?
+    /// The number of displayed pointers.
+    @MainActor @Published var numberOfPointers = 2
+    /// Sets the desired number of displayed pointers, but not bigger than 5 and not less than 1.
+    let numberOfPointersInput = PassthroughSubject<Int, Never>()
+
     /// The string in the address line.
     @MainActor @Published var urlString: String? {
         didSet {
@@ -34,6 +39,9 @@ class MainScreenVM {
     private let model = PointsGeneratorModel()
     private var cancellables = Set<AnyCancellable>()
 
+    private static let minNumberOfPointers = 1
+    private static let maxNumberOfPointers = 5
+
     // MARK: - Initialization
 
     init() {
@@ -51,5 +59,13 @@ class MainScreenVM {
         model.$point
             .assign(to: \.touches, on: self)
             .store(in: &cancellables)
+
+        numberOfPointersInput.map { newNumberOfPointers in
+            var newNumberOfPointers = min(Self.maxNumberOfPointers, newNumberOfPointers)
+            newNumberOfPointers = max(Self.minNumberOfPointers, newNumberOfPointers)
+            return newNumberOfPointers
+        }
+        .assign(to: \.numberOfPointers, on: self)
+        .store(in: &cancellables)
     }
 }
