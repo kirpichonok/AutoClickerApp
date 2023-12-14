@@ -10,7 +10,7 @@ final class MainScreenView: UIViewController {
     @IBOutlet private var goForwardButton: UIButton!
     @IBOutlet private var settingsButton: UIButton!
     @IBOutlet private var refreshButton: UIButton!
-    @IBOutlet private var pointerView: PointerView!
+    @IBOutlet private var pointersViews: [PointerView]!
     @IBOutlet private var textFieldView: RoundedTextField!
     @IBOutlet private var webView: WKWebView!
 
@@ -45,7 +45,7 @@ final class MainScreenView: UIViewController {
     }
 
     @objc private func pointDidSet() {
-        viewModel.pointLocation = [pointerView.pointerCenter]
+        viewModel.pointLocation = pointersViews.filter { !$0.isHidden }.map { $0.center }
     }
 
     @objc private func goBack() {
@@ -64,6 +64,28 @@ final class MainScreenView: UIViewController {
 
     private var cancellables = Set<AnyCancellable>()
     private var viewModel = MainScreenVM()
+    private let initialPointersCoordinates = [
+        CGPoint(x: 140, y: 200),
+        CGPoint(x: 90, y: 190),
+        CGPoint(x: 100, y: 300),
+        CGPoint(x: 200, y: 340),
+        CGPoint(x: 230, y: 440),
+    ]
+    private var numberOfVisiblePointers = 0 {
+        didSet {
+            if oldValue > numberOfVisiblePointers {
+                for index in numberOfVisiblePointers..<oldValue {
+                    pointersViews[index].isHidden = true
+                }
+            }
+            else if oldValue < numberOfVisiblePointers {
+                for index in oldValue..<numberOfVisiblePointers {
+                    pointersViews[index].center = initialPointersCoordinates[index]
+                    pointersViews[index].isHidden = false
+                }
+            }
+        }
+    }
 
     private func bindViewModel() {
         viewModel.$touches
@@ -88,13 +110,26 @@ final class MainScreenView: UIViewController {
                 }
             }
             .store(in: &cancellables)
+
+        viewModel.$numberOfPointers
+            .assign(to: \.numberOfVisiblePointers, on: self)
+            .store(in: &cancellables)
     }
 
     private func viewSetup() {
         (view as? GradientBackgroundView)?.setGradientBackground(with: Gradient.background)
         startButton.configuration = UIButton.Configuration.capsuleWithBackground(gradient: Gradient.purple)
-        pointerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
         webView.allowsBackForwardNavigationGestures = true
+        pointersSetup()
+    }
+
+    private func pointersSetup() {
+        for (index, pointerView) in pointersViews.enumerated() {
+            pointerView.pointerNumber = String(index + 1)
+            pointerView.center = initialPointersCoordinates[index]
+            pointerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
+            pointerView.isHidden = true
+        }
     }
 
     private func buttonsActionSetup() {
@@ -102,13 +137,6 @@ final class MainScreenView: UIViewController {
         goBackButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         goForwardButton.addTarget(self, action: #selector(goForward), for: .touchUpInside)
         refreshButton.addTarget(self, action: #selector(reloadPage), for: .touchUpInside)
-    }
-
-    private func insertGradientScreenBackground() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = Gradient.background
-        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
     private func addSubscribers() {

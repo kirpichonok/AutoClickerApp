@@ -44,7 +44,7 @@ final class PointerView: UIView {
     private lazy var pointerNumberLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .appRegular(size: 12)
+        label.font = .preferredFont(forTextStyle: .caption1)
         label.textColor = majorColor
         label.text = "1"
         return label
@@ -97,6 +97,6 @@ final class PointerView: UIView {
 
 struct PreviewRepresentedMyView: PreviewProvider {
     static var previews: some View {
-        PreviewContainer(PointerView(pointerNumber: "123"))
+        PreviewContainer(PointerView(pointerNumber: "2"))
     }
 }
