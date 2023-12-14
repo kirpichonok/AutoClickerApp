@@ -29,22 +29,22 @@ final class MainScreenView: UIViewController {
 
     // MARK: - Actions
 
-    @objc private func handlePanPoint(_ gesture: UIPanGestureRecognizer) {
-        guard let pointView = gesture.view else {
+    @objc private func handlePanPointer(_ gesture: UIPanGestureRecognizer) {
+        guard let pointerView = gesture.view else {
             return
         }
-        let initialCenter = pointView.center
+        let initialCenter = pointerView.center
         let translation = gesture.translation(in: view)
 
         if gesture.state != .cancelled {
-            pointView.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
+            pointerView.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
             gesture.setTranslation(CGPoint.zero, in: view)
         } else {
-            pointView.center = initialCenter
+            pointerView.center = initialCenter
         }
     }
 
-    @objc private func pointDidSet() {
+    @objc private func pointersDidSet() {
         viewModel.pointLocation = pointersViews.filter { !$0.isHidden }.map { $0.center }
     }
 
@@ -77,8 +77,7 @@ final class MainScreenView: UIViewController {
                 for index in numberOfVisiblePointers..<oldValue {
                     pointersViews[index].isHidden = true
                 }
-            }
-            else if oldValue < numberOfVisiblePointers {
+            } else if oldValue < numberOfVisiblePointers {
                 for index in oldValue..<numberOfVisiblePointers {
                     pointersViews[index].center = initialPointersCoordinates[index]
                     pointersViews[index].isHidden = false
@@ -90,9 +89,7 @@ final class MainScreenView: UIViewController {
     private func bindViewModel() {
         viewModel.$touches
             .sink { [weak self] point in
-                guard let self, let point else {
-                    return
-                }
+                guard let self, let point else { return }
 
                 let touchPointInWebView = webView.convert(point, from: view)
                 simulateTouchAt(point: touchPointInWebView)
@@ -127,13 +124,13 @@ final class MainScreenView: UIViewController {
         for (index, pointerView) in pointersViews.enumerated() {
             pointerView.pointerNumber = String(index + 1)
             pointerView.center = initialPointersCoordinates[index]
-            pointerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
+            pointerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPointer)))
             pointerView.isHidden = true
         }
     }
 
     private func buttonsActionSetup() {
-        startButton.addTarget(self, action: #selector(pointDidSet), for: .touchUpInside)
+        startButton.addTarget(self, action: #selector(pointersDidSet), for: .touchUpInside)
         goBackButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         goForwardButton.addTarget(self, action: #selector(goForward), for: .touchUpInside)
         refreshButton.addTarget(self, action: #selector(reloadPage), for: .touchUpInside)
