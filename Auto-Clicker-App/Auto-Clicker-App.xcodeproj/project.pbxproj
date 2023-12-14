@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190042B22B1DF7CB00199D11 /* MainScreenView.swift */; };
+		19037B6B2B5AECBA0030ABA4 /* PointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19037B6A2B5AECBA0030ABA4 /* PointerView.swift */; };
 		191E10AB2B59940600707733 /* String+K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E10AA2B59940500707733 /* String+K.swift */; };
 		19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19224DA42B202966006C9113 /* MainScreenVM.swift */; };
 		193CC49B2B5CDA1800352A44 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4992B5CDA1700352A44 /* PreviewContainer.swift */; };
 		193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */; };
-		193CC4A02B5CDD8000352A44 /* UIFont+appFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC49F2B5CDD8000352A44 /* UIFont+appFont.swift */; };
+		193CC4A22B5CE2A900352A44 /* UIFont+appFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4A12B5CE2A900352A44 /* UIFont+appFont.swift */; };
 		195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */; };
 		197872A02B282D880034B77D /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1978729F2B282D880034B77D /* SF-Pro.ttf */; };
 		19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */; };
@@ -29,11 +30,12 @@
 
 /* Begin PBXFileReference section */
 		190042B22B1DF7CB00199D11 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		19037B6A2B5AECBA0030ABA4 /* PointerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerView.swift; sourceTree = "<group>"; };
 		191E10AA2B59940500707733 /* String+K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+K.swift"; sourceTree = "<group>"; };
 		19224DA42B202966006C9113 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 		193CC4992B5CDA1700352A44 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
-		193CC49F2B5CDD8000352A44 /* UIFont+appFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+appFont.swift"; sourceTree = "<group>"; };
+		193CC4A12B5CE2A900352A44 /* UIFont+appFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+appFont.swift"; sourceTree = "<group>"; };
 		195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsGeneratorModel.swift; sourceTree = "<group>"; };
 		1978729F2B282D880034B77D /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		19BBBD972B14E3940053F1C5 /* Auto-Clicker-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto-Clicker-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,10 @@
 		191E10AD2B59944F00707733 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				193CC4A12B5CE2A900352A44 /* UIFont+appFont.swift */,
+				19FFB5A82B29798500CBAFF8 /* UIImage+scaleTo.swift */,
+				19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */,
+				19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */,
 				191E10AA2B59940500707733 /* String+K.swift */,
 			);
 			path = Extension;
@@ -158,8 +164,8 @@
 				193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */,
 				193DB0FF2B282FD000F4D4F4 /* Font */,
 				19BBDE822B1DA37900824BBE /* Gradient.swift */,
+				19037B6A2B5AECBA0030ABA4 /* PointerView.swift */,
 				19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */,
-				19CEB2AD2B27245900EDF9BF /* Extension */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -178,17 +184,6 @@
 				19CAA1972B28378E0040BEEF /* MainScreenSettingsView.swift */,
 			);
 			path = MainScreenSettingsView;
-			sourceTree = "<group>";
-		};
-		19CEB2AD2B27245900EDF9BF /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				193CC49F2B5CDD8000352A44 /* UIFont+appFont.swift */,
-				19FFB5A82B29798500CBAFF8 /* UIImage+scaleTo.swift */,
-				19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */,
-				19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +271,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = " if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -292,14 +288,15 @@
 				19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */,
 				19CEB2B12B27433A00EDF9BF /* UIButton+Configuration.swift in Sources */,
 				190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */,
+				193CC4A22B5CE2A900352A44 /* UIFont+appFont.swift in Sources */,
 				193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */,
 				19CEB2AC2B27243D00EDF9BF /* UIView+setGradientBackground.swift in Sources */,
 				19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */,
+				19037B6B2B5AECBA0030ABA4 /* PointerView.swift in Sources */,
 				19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */,
 				195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */,
 				19CAA1982B28378E0040BEEF /* MainScreenSettingsView.swift in Sources */,
 				19FFB5A92B29798500CBAFF8 /* UIImage+scaleTo.swift in Sources */,
-				193CC4A02B5CDD8000352A44 /* UIFont+appFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

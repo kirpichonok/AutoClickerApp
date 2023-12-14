@@ -39,11 +39,6 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot.scope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="su7-xH-3nf">
-                                <rect key="frame" x="181" y="411" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-5d-5Ml">
                                 <rect key="frame" x="0.0" y="770" width="393" height="48"/>
                                 <subviews>
@@ -88,15 +83,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfV-T0-LHn" customClass="PointerView" customModule="Auto_Clicker_App" customModuleProvider="target">
+                                <rect key="frame" x="181.66666666666666" y="379.66666666666669" width="30" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Hb-4S-Cjr"/>
+                                    <constraint firstAttribute="width" constant="30" id="xwm-8A-m0J"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAz-Qh-Zd4"/>
                         <constraints>
                             <constraint firstItem="Rvm-IF-V6C" firstAttribute="centerX" secondItem="XAz-Qh-Zd4" secondAttribute="centerX" id="AUS-UM-TOY"/>
                             <constraint firstItem="9fP-YQ-k8a" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" constant="16" id="KGX-g1-Vmu"/>
+                            <constraint firstItem="JfV-T0-LHn" firstAttribute="centerX" secondItem="Gdh-wy-RiS" secondAttribute="centerX" id="OaY-D4-Tnp"/>
                             <constraint firstItem="9fP-YQ-k8a" firstAttribute="top" secondItem="XAz-Qh-Zd4" secondAttribute="top" id="T7s-bx-eEu"/>
                             <constraint firstItem="Rvm-IF-V6C" firstAttribute="top" secondItem="Gdh-wy-RiS" secondAttribute="bottom" constant="16" id="WJX-uI-cAG"/>
                             <constraint firstItem="gRu-5d-5Ml" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="Wgj-a3-aQy"/>
                             <constraint firstItem="Gdh-wy-RiS" firstAttribute="top" secondItem="9fP-YQ-k8a" secondAttribute="bottom" constant="8" id="Zpg-4q-6LA"/>
+                            <constraint firstItem="JfV-T0-LHn" firstAttribute="centerY" secondItem="Gdh-wy-RiS" secondAttribute="centerY" id="a4G-5w-5J6"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="gRu-5d-5Ml" secondAttribute="trailing" id="eGN-hR-uJt"/>
                             <constraint firstItem="Gdh-wy-RiS" firstAttribute="leading" secondItem="XAz-Qh-Zd4" secondAttribute="leading" id="n2P-qu-hjX"/>
                             <constraint firstItem="XAz-Qh-Zd4" firstAttribute="trailing" secondItem="9fP-YQ-k8a" secondAttribute="trailing" constant="16" id="ofu-ew-six"/>
@@ -109,7 +114,7 @@
                     <connections>
                         <outlet property="goBackButton" destination="cen-1q-vuV" id="6nm-mQ-g5M"/>
                         <outlet property="goForwardButton" destination="Qp4-Xa-rcz" id="GOu-AX-CWW"/>
-                        <outlet property="pointView" destination="su7-xH-3nf" id="qWv-UW-VPx"/>
+                        <outlet property="pointerView" destination="JfV-T0-LHn" id="Z8P-aQ-iwB"/>
                         <outlet property="refreshButton" destination="23Y-UD-fAn" id="XuS-Iy-ncH"/>
                         <outlet property="settingsButton" destination="PnA-qW-hbf" id="UuB-eb-e8f"/>
                         <outlet property="startButton" destination="Rvm-IF-V6C" id="De3-Cv-BDc"/>
@@ -327,13 +332,12 @@
         <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="dot.scope" catalog="system" width="128" height="124"/>
         <image name="scope" catalog="system" width="128" height="124"/>
         <namedColor name="Background Gradient One">
             <color red="0.20000000000000001" green="0.16078431372549021" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

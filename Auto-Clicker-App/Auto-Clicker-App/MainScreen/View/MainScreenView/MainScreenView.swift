@@ -10,9 +10,7 @@ final class MainScreenView: UIViewController {
     @IBOutlet private var goForwardButton: UIButton!
     @IBOutlet private var settingsButton: UIButton!
     @IBOutlet private var refreshButton: UIButton!
-    @IBOutlet private var homeButton: UIButton!
-    @IBOutlet private var pointView: UIImageView!
-
+    @IBOutlet private var pointerView: PointerView!
     @IBOutlet private var textFieldView: RoundedTextField!
     @IBOutlet private var webView: WKWebView!
 
@@ -47,7 +45,7 @@ final class MainScreenView: UIViewController {
     }
 
     @objc private func pointDidSet() {
-        viewModel.pointLocation = [pointView.center]
+        viewModel.pointLocation = [pointerView.pointerCenter]
     }
 
     @objc private func goBack() {
@@ -95,7 +93,7 @@ final class MainScreenView: UIViewController {
     private func viewSetup() {
         (view as? GradientBackgroundView)?.setGradientBackground(with: Gradient.background)
         startButton.configuration = UIButton.Configuration.capsuleWithBackground(gradient: Gradient.purple)
-        pointView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
+        pointerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPoint)))
         webView.allowsBackForwardNavigationGestures = true
     }
 
