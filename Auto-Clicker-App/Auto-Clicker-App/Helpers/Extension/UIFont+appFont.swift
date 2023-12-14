@@ -18,4 +18,14 @@ extension UIFont {
             return UIFont.systemFont(ofSize: size, weight: .regular)
         }
     }
+
+    static func appMedium(size: CGFloat) -> UIFont {
+        if let font = UIFont(name: "SFPro-Medium", size: size) {
+            return font
+        }
+        else {
+            assertionFailure()
+            return UIFont.systemFont(ofSize: size, weight: .regular)
+        }
+    }
 }
