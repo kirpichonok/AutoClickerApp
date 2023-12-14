@@ -2,15 +2,19 @@ import Combine
 import Foundation
 
 class MainScreenVM {
+    // MARK: - Properties
+
     /// The point to simulate touches.
-    var pointLocation: CGPoint? {
+    var pointLocation = [CGPoint]() {
         didSet {
-            if pointLocation != nil {
+            if !pointLocation.isEmpty {
                 model.generatePoints(with: pointLocation)
             }
         }
     }
 
+    /// The point where the touch should be simulated.
+    @MainActor @Published var touches: CGPoint?
     /// The string in the address line.
     @MainActor @Published var urlString: String? {
         didSet {
@@ -21,14 +25,16 @@ class MainScreenVM {
         }
     }
 
-    /// The point where the touch should be simulated.
-    @MainActor @Published var touches: CGPoint?
-
     /// URL address obtained from the user input.
     @MainActor @Published var url: URL?
 
     /// Handles inputted string data as a URL and broadcasts the result.
     let urlInput = PassthroughSubject<String, Never>()
+
+    private let model = PointsGeneratorModel()
+    private var cancellables = Set<AnyCancellable>()
+
+    // MARK: - Initialization
 
     init() {
         urlInput
@@ -46,7 +52,4 @@ class MainScreenVM {
             .assign(to: \.touches, on: self)
             .store(in: &cancellables)
     }
-
-    private let model = PointsGeneratorModel()
-    private var cancellables = Set<AnyCancellable>()
 }

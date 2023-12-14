@@ -47,7 +47,7 @@ final class MainScreenView: UIViewController {
     }
 
     @objc private func pointDidSet() {
-        viewModel.pointLocation = pointView.center
+        viewModel.pointLocation = [pointView.center]
     }
 
     @objc private func goBack() {

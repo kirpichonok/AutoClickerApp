@@ -4,8 +4,7 @@ extension UIFont {
     static func appSemibold(size: CGFloat) -> UIFont? {
         if let font = UIFont(name: "SFPro-Semibold", size: size) {
             return font
-        }
-        else {
+        } else {
             assertionFailure()
             return UIFont.systemFont(ofSize: size, weight: .regular)
         }
@@ -14,8 +13,7 @@ extension UIFont {
     static func appRegular(size: CGFloat) -> UIFont {
         if let font = UIFont(name: "SFPro-Regular", size: size) {
             return font
-        }
-        else {
+        } else {
             assertionFailure()
             return UIFont.systemFont(ofSize: size, weight: .regular)
         }
