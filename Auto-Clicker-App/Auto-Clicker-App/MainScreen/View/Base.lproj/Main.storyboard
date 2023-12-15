@@ -62,7 +62,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="scope" catalog="system"/>
                                         <connections>
-                                            <segue destination="JGC-8P-xx1" kind="presentation" id="PCw-RV-GAm"/>
+                                            <segue destination="JGC-8P-xx1" kind="presentation" identifier="goToSettings" id="PCw-RV-GAm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -192,8 +192,11 @@
                                                     <constraint firstItem="RB2-7h-6sf" firstAttribute="leading" secondItem="MDX-ro-mO9" secondAttribute="leading" id="cg7-sY-JhZ"/>
                                                 </constraints>
                                             </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="unh-Rt-1R2">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unh-Rt-1R2">
                                                 <rect key="frame" x="-2" y="27.333333333333329" width="365" height="31"/>
+                                                <connections>
+                                                    <action selector="changeNumberOfPoints:" destination="BCh-rn-aUE" eventType="valueChanged" id="tUx-TA-JGD"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -204,7 +207,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Clicks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dld-Ow-Je9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="270.33333333333331" height="19.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="260.66666666666669" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -234,6 +237,9 @@
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Qt-29-eBo">
                                                 <rect key="frame" x="-2" y="27.333333333333314" width="365" height="31"/>
+                                                <connections>
+                                                    <action selector="changeNumberOfClicks:" destination="BCh-rn-aUE" eventType="valueChanged" id="2U9-GT-Wvz"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -274,6 +280,9 @@
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-5w-Dmz">
                                                 <rect key="frame" x="-2" y="27.333333333333343" width="365" height="31"/>
+                                                <connections>
+                                                    <action selector="changeIntervalTime:" destination="BCh-rn-aUE" eventType="valueChanged" id="6q0-ZG-PgE"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>

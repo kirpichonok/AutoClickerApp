@@ -15,8 +15,6 @@ class MainScreenVM {
     @MainActor @Published var touches: CGPoint?
     /// The number of displayed pointers.
     @MainActor @Published var numberOfPointers = 2
-    /// Sets the desired number of displayed pointers, but not bigger than 5 and not less than 1.
-    let numberOfPointersInput = PassthroughSubject<Int, Never>()
 
     @MainActor @Published var isGenerating = false
 
@@ -60,20 +58,19 @@ class MainScreenVM {
             .assign(to: \.touches, on: self)
             .store(in: &cancellables)
 
-        numberOfPointersInput.map { newNumberOfPointers in
-            var newNumberOfPointers = min(Self.maxNumberOfPointers, newNumberOfPointers)
-            newNumberOfPointers = max(Self.minNumberOfPointers, newNumberOfPointers)
-            return newNumberOfPointers
-        }
-        .assign(to: \.numberOfPointers, on: self)
-        .store(in: &cancellables)
-
         model.$isGenerating
             .assign(to: \.isGenerating, on: self)
             .store(in: &cancellables)
     }
 
     // MARK: - Methods
+
+    @MainActor func setNumberOfPointers(_ number: Float) {
+        var newNumberOfPointers = Int(number.rounded())
+        newNumberOfPointers = min(Self.maxNumberOfPointers, newNumberOfPointers)
+        newNumberOfPointers = max(Self.minNumberOfPointers, newNumberOfPointers)
+        numberOfPointers = newNumberOfPointers
+    }
 
     func startGenerating() {
         model.generatePoints(with: pointLocation)

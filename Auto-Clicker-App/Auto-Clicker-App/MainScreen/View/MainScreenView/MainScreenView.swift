@@ -28,6 +28,20 @@ final class MainScreenView: UIViewController {
         addSubscribers()
     }
 
+    // MARK: - Overrides
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goToSettings":
+            if let viewController = segue.destination as? UINavigationController {
+                (viewController.viewControllers.first as? MainScreenSettingsView)?.viewModel = viewModel
+            }
+
+        default:
+            break
+        }
+    }
+
     // MARK: - Actions
 
     @objc private func handlePanPointer(_ gesture: UIPanGestureRecognizer) {

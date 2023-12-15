@@ -14,6 +14,7 @@
 		193CC49B2B5CDA1800352A44 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4992B5CDA1700352A44 /* PreviewContainer.swift */; };
 		193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */; };
 		193CC4A22B5CE2A900352A44 /* UIFont+appFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4A12B5CE2A900352A44 /* UIFont+appFont.swift */; };
+		193CC4A42B5CE3A900352A44 /* Float+stringWithoutZeroFraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193CC4A32B5CE3A900352A44 /* Float+stringWithoutZeroFraction.swift */; };
 		195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */; };
 		197872A02B282D880034B77D /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1978729F2B282D880034B77D /* SF-Pro.ttf */; };
 		19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		193CC4992B5CDA1700352A44 /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		193CC49A2B5CDA1700352A44 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		193CC4A12B5CE2A900352A44 /* UIFont+appFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+appFont.swift"; sourceTree = "<group>"; };
+		193CC4A32B5CE3A900352A44 /* Float+stringWithoutZeroFraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+stringWithoutZeroFraction.swift"; sourceTree = "<group>"; };
 		195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsGeneratorModel.swift; sourceTree = "<group>"; };
 		1978729F2B282D880034B77D /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		19BBBD972B14E3940053F1C5 /* Auto-Clicker-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto-Clicker-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 		191E10AD2B59944F00707733 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				193CC4A32B5CE3A900352A44 /* Float+stringWithoutZeroFraction.swift */,
 				193CC4A12B5CE2A900352A44 /* UIFont+appFont.swift */,
 				19FFB5A82B29798500CBAFF8 /* UIImage+scaleTo.swift */,
 				19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */,
@@ -283,6 +286,7 @@
 				193CC49B2B5CDA1800352A44 /* PreviewContainer.swift in Sources */,
 				191E10AB2B59940600707733 /* String+K.swift in Sources */,
 				19BBBD9B2B14E3940053F1C5 /* AppDelegate.swift in Sources */,
+				193CC4A42B5CE3A900352A44 /* Float+stringWithoutZeroFraction.swift in Sources */,
 				19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */,
 				19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */,
 				19CEB2B12B27433A00EDF9BF /* UIButton+Configuration.swift in Sources */,
