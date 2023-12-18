@@ -31,11 +31,11 @@ final class MainScreenSettingsView: UIViewController {
     }
 
     @IBAction private func changeNumberOfClicks(_ sender: UISlider) {
-        updateNumberOfClicksLabel(with: sender.value)
+        viewModel?.setNumberOfClicks(sender.value)
     }
 
     @IBAction private func changeIntervalTime(_ sender: UISlider) {
-        updateIntervalTimeLabel(with: sender.value)
+        viewModel?.setIntervalTime(sender.value)
     }
 
     private func viewSetup() {
@@ -64,24 +64,38 @@ final class MainScreenSettingsView: UIViewController {
     }
 
     private func bindViewModel() {
-        viewModel?.$numberOfPointers
-            .sink { [weak self] value in
+        viewModel?.$numberOfPointersText
+            .sink { [weak self] numberOfPointersText in
                 guard let self else {
                     return
                 }
-                numberOfPointersSlider.value = Float(value)
-                numberOfPointersLabel.text = "\(value)"
+                numberOfPointersLabel.text = numberOfPointersText
             }
             .store(in: &cancellables)
-    }
 
-    private func updateNumberOfClicksLabel(with value: Float) {
-        let valueToUse = Int(value)
-        numberOfClicksLabel.text = "\(valueToUse)"
-    }
+        viewModel?.$numberOfPointers
+            .sink { [weak self] value in
+                guard let self else { return }
+                numberOfPointersSlider.value = Float(value)
+            }
+            .store(in: &cancellables)
 
-    private func updateIntervalTimeLabel(with value: Float) {
-        let valueToUse = Float(Int(value * 10.0)) / 10
-        intervalTimeLabel.text = valueToUse.stringWithoutZeroFraction
+        viewModel?.$numberOfClicks
+            .sink { [weak self] numberOfClicksText in
+                guard let self else {
+                    return
+                }
+                numberOfClicksLabel.text = numberOfClicksText
+            }
+            .store(in: &cancellables)
+
+        viewModel?.$intervalTime
+            .sink { [weak self] intervalTimeText in
+                guard let self else {
+                    return
+                }
+                intervalTimeLabel.text = intervalTimeText
+            }
+            .store(in: &cancellables)
     }
 }

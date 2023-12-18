@@ -13,9 +13,15 @@ class MainScreenVM {
 
     /// The point where the touch should be simulated.
     @MainActor @Published var touches: CGPoint?
-    /// The number of displayed pointers.
-    @MainActor @Published var numberOfPointers = 2
-
+    /// The number of visible pointers.
+    @MainActor @Published var numberOfPointers = 1
+    /// The text to display as the set number of visible pointers.
+    @MainActor @Published var numberOfPointersText = ""
+    /// The text to display as the set number of clicks.
+    @MainActor @Published var numberOfClicks = ""
+    /// The text to display as the set time interval between clicks.
+    @MainActor @Published var intervalTime = ""
+    /// Displays whether the model is generating points at the moment.
     @MainActor @Published var isGenerating = false
 
     /// The string in the address line.
@@ -54,16 +60,34 @@ class MainScreenVM {
             .assign(to: \.urlString, on: self)
             .store(in: &cancellables)
 
+        $numberOfPointers
+            .map { String($0) }
+            .assign(to: &$numberOfPointersText)
+
         model.$point
-            .assign(to: \.touches, on: self)
-            .store(in: &cancellables)
+            .assign(to: &$touches)
 
         model.$isGenerating
-            .assign(to: \.isGenerating, on: self)
-            .store(in: &cancellables)
+            .assign(to: &$isGenerating)
+
+        model.$numberOfClicks
+            .map { String($0) }
+            .assign(to: &$numberOfClicks)
+
+        model.$intervalTime
+            .map { String($0) }
+            .assign(to: &$intervalTime)
     }
 
     // MARK: - Methods
+
+    func startGenerating() {
+        model.generatePoints(with: pointLocation)
+    }
+
+    func stopGenerating() {
+        model.stopGenerating()
+    }
 
     @MainActor func setNumberOfPointers(_ number: Float) {
         var newNumberOfPointers = Int(number.rounded())
@@ -72,11 +96,12 @@ class MainScreenVM {
         numberOfPointers = newNumberOfPointers
     }
 
-    func startGenerating() {
-        model.generatePoints(with: pointLocation)
+    @MainActor func setNumberOfClicks(_ number: Float) {
+        let number = Int(number)
+        model.numberOfClicks = number
     }
 
-    func stopGenerating() {
-        model.stopGenerating()
+    @MainActor func setIntervalTime(_ interval: Float) {
+        model.intervalTime = Double(Int(interval * 10.0)) / 10
     }
 }
