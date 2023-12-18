@@ -8,20 +8,20 @@ class MainScreenVM {
     var pointLocation = [CGPoint]()
 
     /// The point where the touch should be simulated.
-    @MainActor @Published var touches: CGPoint?
+    @MainActor @Published private(set) var touches: CGPoint?
     /// The number of visible pointers.
-    @MainActor @Published var numberOfPointers = 1
+    @MainActor @Published  private(set)var numberOfPointers = 1
     /// The text to display as the set number of visible pointers.
-    @MainActor @Published var numberOfPointersText = ""
+    @MainActor @Published private(set) var numberOfPointersText = ""
     /// The text to display as the set number of clicks.
-    @MainActor @Published var numberOfClicks = ""
+    @MainActor @Published private(set) var numberOfClicks = ""
     /// The text to display as the set time interval between clicks.
-    @MainActor @Published var intervalTime = ""
+    @MainActor @Published private(set) var intervalTime = ""
     /// Displays whether the model is generating points at the moment.
-    @MainActor @Published var isGenerating = false
+    @MainActor @Published  private(set) var isGenerating = false
 
     /// The string in the address line.
-    @MainActor @Published var urlString: String? {
+    @MainActor @Published private(set) var urlString: String? {
         didSet {
             if let urlString,
                let url = URL(string: urlString) {
@@ -31,7 +31,7 @@ class MainScreenVM {
     }
 
     /// URL address obtained from the user input.
-    @MainActor @Published var url: URL?
+    @MainActor @Published private(set) var url: URL?
 
     /// Handles inputted string data as a URL and broadcasts the result.
     let urlInput = PassthroughSubject<String, Never>()
