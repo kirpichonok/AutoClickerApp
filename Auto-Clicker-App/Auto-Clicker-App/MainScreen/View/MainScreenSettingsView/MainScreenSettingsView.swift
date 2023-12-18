@@ -20,8 +20,8 @@ final class MainScreenSettingsView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindViewModel()
         viewSetup()
+        bindViewModel()
     }
 
     // MARK: - Private methods
