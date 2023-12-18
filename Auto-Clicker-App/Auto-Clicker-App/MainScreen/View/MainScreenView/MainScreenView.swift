@@ -116,6 +116,7 @@ final class MainScreenView: UIViewController {
                     pointersViews[index].isHidden = false
                 }
             }
+            updatePointLocations()
         }
     }
 
