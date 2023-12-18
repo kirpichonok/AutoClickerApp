@@ -22,15 +22,16 @@ final class MainScreenView: UIViewController {
         textFieldView.delegate = self
         webView.navigationDelegate = self
 
-        viewSetup()
         bindViewModel()
+        viewSetup()
         buttonsActionSetup()
         addSubscribers()
+        updatePointLocations()
     }
 
     // MARK: - Overrides
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         switch segue.identifier {
         case "goToSettings":
             if let viewController = segue.destination as? UINavigationController {
@@ -57,13 +58,14 @@ final class MainScreenView: UIViewController {
         } else {
             pointerView.center = initialCenter
         }
+        updatePointLocations()
     }
 
     @objc private func startButtonDidPressed() {
         if viewModel.isGenerating {
             viewModel.stopGenerating()
         } else {
-            viewModel.pointLocation = pointersViews.filter { !$0.isHidden }.map { $0.center }
+            viewModel.startGenerating()
         }
     }
 
@@ -86,6 +88,12 @@ final class MainScreenView: UIViewController {
             startButtonSetup()
         }
     }
+
+    private func updatePointLocations() {
+        viewModel.pointLocation = pointersViews.filter { !$0.isHidden }.map { $0.center }
+    }
+
+    // MARK: - Private
 
     private var cancellables = Set<AnyCancellable>()
     private var viewModel = MainScreenVM()
@@ -120,18 +128,16 @@ final class MainScreenView: UIViewController {
     // MARK: - Private methods
 
     private func startButtonSetup() {
-        startButtonWidth.constant = isLoading ? startButton.bounds.height : 311
+        startButtonWidth.constant = isLoading ? startButton.bounds.height : 211
 
         var didPressedConfiguration = UIButton.Configuration.borderedProminent()
         didPressedConfiguration.image = UIImage(systemName: .K.stopFillImageName)
         didPressedConfiguration.cornerStyle = .capsule
         didPressedConfiguration.baseBackgroundColor = .systemRed
-        didPressedConfiguration.title = ""
 
         var normalConfiguration = UIButton.Configuration.capsuleWithBackground(gradient: Gradient.purple)
-        normalConfiguration.title = "Let's start"
-        normalConfiguration.image = nil
-        normalConfiguration.baseForegroundColor = .accent
+        normalConfiguration.image = UIImage(systemName: .K.playFillImageName)
+        normalConfiguration.baseForegroundColor = .white
 
         startButton.configuration = isLoading ? didPressedConfiguration : normalConfiguration
         startButton.setNeedsLayout()
@@ -180,7 +186,7 @@ final class MainScreenView: UIViewController {
             pointerView.pointerNumber = String(index + 1)
             pointerView.center = initialPointersCoordinates[index]
             pointerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanPointer)))
-            pointerView.isHidden = true
+            pointerView.isHidden = index >= numberOfVisiblePointers
         }
     }
 

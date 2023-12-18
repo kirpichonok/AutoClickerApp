@@ -5,11 +5,7 @@ class MainScreenVM {
     // MARK: - Properties
 
     /// The point to simulate touches.
-    var pointLocation = [CGPoint]() {
-        didSet {
-            model.generatePoints(with: pointLocation)
-        }
-    }
+    var pointLocation = [CGPoint]()
 
     /// The point where the touch should be simulated.
     @MainActor @Published var touches: CGPoint?
