@@ -7,6 +7,6 @@ extension String {
         static let dotScopeImageName = "dot.scope"
         static let arrowCirclePathImageName = "arrow.circlepath"
         static let xmarkImageName = "xmark"
-        static let circleFill = "circle.fill"
+        static let circleFillImageName = "circle.fill"
     }
 }
