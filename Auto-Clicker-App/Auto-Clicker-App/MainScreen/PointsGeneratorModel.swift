@@ -5,71 +5,74 @@ final class PointsGeneratorModel {
 
     /// Point to be updated over time.
     @Published private(set) var point: CGPoint?
-    @Published var numberOfClicks = 3
-    @Published var timeInterval = 2.0
     @Published private(set) var isGenerating = false
+
+    // MARK: - Private properties
 
     private var timer: Timer?
     private var coordinates = [CGPoint]()
     private var currentIndex = 0
-    private var currentNumberOfClicks = 0
+    private var restNumberOfClicks = 0
 
     // MARK: - Methods
 
     /// Generates points with passed coordinates with a certain time interval.
     /// The order of points generating is from the begging to the end of the passed list.
     ///
-    /// - Parameter coordinates: The list of coordinates for the points to be generated.
-    func generatePoints(with coordinates: [CGPoint]) {
+    /// - Parameters:
+    ///  - coordinates: The list of coordinates for the points to be generated.
+    ///  - numberOfClicks: The number of tap repetitions at each point.
+    ///  - timeInterval: The time interval between two consecutive taps.
+    func start(coordinates: [CGPoint], numberOfClicks: Int, timeInterval: Double) {
         guard !coordinates.isEmpty else { return }
         self.coordinates = coordinates
-        currentNumberOfClicks = numberOfClicks
+        restNumberOfClicks = numberOfClicks
         isGenerating = true
-        timerSetup(with: timeInterval)
-    }
-
-    func stopGenerating() {
-        reset()
-    }
-
-    private func timerSetup(with _: TimeInterval) {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: timeInterval,
-                                     repeats: true) { [weak self] timer in
+        timerSetup(with: timeInterval) { [weak self] timer in
             guard let self else {
                 timer.invalidate()
                 return
             }
 
-            if let nextPoint = next() {
-                self.point = nextPoint
+            if let point = nextPoint() {
+                self.point = point
             } else {
                 reset()
             }
         }
     }
 
+    func stop() {
+        reset()
+    }
+
+    // MARK: -  Private methods
+
+    private func timerSetup(with timeInterval: TimeInterval, handler: @escaping (Timer) -> Void) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: timeInterval,
+                                     repeats: true,
+                                     block: handler)
+    }
+
     private func reset() {
         timer?.invalidate()
         isGenerating = false
-        numberOfClicks = 3
         currentIndex = 0
     }
 
-    private func next() -> CGPoint? {
+    private func nextPoint() -> CGPoint? {
         guard !coordinates.isEmpty else {
             return nil
         }
-        defer {
-            currentIndex += 1
-        }
+        defer { currentIndex += 1 }
 
         if !coordinates.indices.contains(currentIndex) {
             currentIndex = 0
-            currentNumberOfClicks -= 1
+            restNumberOfClicks -= 1
         }
 
-        if currentNumberOfClicks > 0 {
+        if restNumberOfClicks > 0 {
             return coordinates[currentIndex]
         } else {
             return nil
