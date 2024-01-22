@@ -4,20 +4,18 @@ import Foundation
 class MainScreenVM {
     // MARK: - Properties
 
-    /// The point to simulate touches.
+    /// The coordinates of points to simulate touches.
     var pointLocation = [CGPoint]()
-
     /// The point where the touch should be simulated.
     @MainActor @Published private(set) var touches: CGPoint?
     /// The number of visible pointers.
     @MainActor @Published private(set) var numberOfPointers = 1
-    /// The text to display as the set number of clicks.
+    /// The number of clicks at each point where the pointers are set.
     @Published private(set) var numberOfClicks = 2
-    /// The text to display as the set time interval between clicks.
+    /// The time interval between clicks.
     @Published private(set) var timeInterval: Double = 2.0
     /// Displays whether the model is generating points at the moment.
     @MainActor @Published private(set) var isGenerating = false
-
     /// The string in the address line.
     @MainActor @Published private(set) var urlString: String? {
         didSet {
@@ -27,10 +25,8 @@ class MainScreenVM {
             }
         }
     }
-
-    /// URL address obtained from the user input.
+    /// URL address obtained from the user input in the address line.
     @MainActor @Published private(set) var url: URL?
-
     /// Handles inputted string data as a URL and broadcasts the result.
     let urlInput = PassthroughSubject<String, Never>()
 
