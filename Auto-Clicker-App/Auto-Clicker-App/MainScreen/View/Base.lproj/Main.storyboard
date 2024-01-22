@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI1-hy-epZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -55,7 +56,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-UD-fAn">
                                         <rect key="frame" x="196.66666666666666" y="0.0" width="97.999999999999972" height="48"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="arrow.circlepath" catalog="system"/>
+                                        <state key="normal" image="arrow.clockwise" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-qW-hbf">
                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="48"/>
@@ -249,7 +250,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GoP-is-2F4">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Interval time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-rw-Nxv">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Time interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-rw-Nxv">
                                                         <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -281,7 +282,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-5w-Dmz">
                                                 <rect key="frame" x="-2" y="27.333333333333343" width="365" height="31"/>
                                                 <connections>
-                                                    <action selector="changeIntervalTime:" destination="BCh-rn-aUE" eventType="valueChanged" id="6q0-ZG-PgE"/>
+                                                    <action selector="changeTimeInterval:" destination="BCh-rn-aUE" eventType="valueChanged" id="IRI-sF-t7X"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -300,12 +301,12 @@
                     <navigationItem key="navigationItem" title="Auto Clicker Settings" id="K4p-BT-wup"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="intervalTimeLabel" destination="Z66-2H-hLu" id="uzw-DE-NVY"/>
-                        <outlet property="intervalTimeSlider" destination="Ydk-5w-Dmz" id="kBK-e6-Jc9"/>
                         <outlet property="numberOfClicksLabel" destination="nJx-FJ-6cU" id="nGM-rM-0wj"/>
                         <outlet property="numberOfClicksSlider" destination="9Qt-29-eBo" id="kd0-yZ-uID"/>
                         <outlet property="numberOfPointersLabel" destination="Pdr-aM-01o" id="4AV-qh-6oU"/>
                         <outlet property="numberOfPointersSlider" destination="unh-Rt-1R2" id="ZPG-oL-bnE"/>
+                        <outlet property="timeIntervalLabel" destination="Z66-2H-hLu" id="vy2-N3-LIk"/>
+                        <outlet property="timeIntervalSlider" destination="Ydk-5w-Dmz" id="On8-ZY-fGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adk-fp-OBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,7 +359,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="scope" catalog="system" width="128" height="124"/>
