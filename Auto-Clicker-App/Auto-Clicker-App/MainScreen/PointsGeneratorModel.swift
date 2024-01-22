@@ -7,7 +7,7 @@ final class PointsGeneratorModel {
     @Published private(set) var point: CGPoint?
     @Published var numberOfClicks = 3
     @Published var timeInterval = 2.0
-    @Published private(set)var isGenerating = false
+    @Published private(set) var isGenerating = false
 
     private var timer: Timer?
     private var coordinates = [CGPoint]()

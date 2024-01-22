@@ -10,15 +10,13 @@ class MainScreenVM {
     /// The point where the touch should be simulated.
     @MainActor @Published private(set) var touches: CGPoint?
     /// The number of visible pointers.
-    @MainActor @Published  private(set)var numberOfPointers = 1
-    /// The text to display as the set number of visible pointers.
-    @MainActor @Published private(set) var numberOfPointersText = ""
+    @MainActor @Published private(set) var numberOfPointers = 1
     /// The text to display as the set number of clicks.
-    @MainActor @Published private(set) var numberOfClicks = ""
+    @MainActor @Published private(set) var numberOfClicks = 2
     /// The text to display as the set time interval between clicks.
-    @MainActor @Published private(set) var timeInterval = ""
+    @MainActor @Published private(set) var timeInterval: Double = 2.0
     /// Displays whether the model is generating points at the moment.
-    @MainActor @Published  private(set) var isGenerating = false
+    @MainActor @Published private(set) var isGenerating = false
 
     /// The string in the address line.
     @MainActor @Published private(set) var urlString: String? {
@@ -56,10 +54,6 @@ class MainScreenVM {
             .assign(to: \.urlString, on: self)
             .store(in: &cancellables)
 
-        $numberOfPointers
-            .map { String($0) }
-            .assign(to: &$numberOfPointersText)
-
         model.$point
             .assign(to: &$touches)
 
@@ -67,11 +61,10 @@ class MainScreenVM {
             .assign(to: &$isGenerating)
 
         model.$numberOfClicks
-            .map { String($0) }
             .assign(to: &$numberOfClicks)
 
         model.$timeInterval
-            .map { String($0) }
+            .map { Double($0) }
             .assign(to: &$timeInterval)
     }
 

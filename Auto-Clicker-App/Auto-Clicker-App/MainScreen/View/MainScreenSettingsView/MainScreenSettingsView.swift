@@ -64,37 +64,27 @@ final class MainScreenSettingsView: UIViewController {
     }
 
     private func bindViewModel() {
-        viewModel?.$numberOfPointersText
-            .sink { [weak self] numberOfPointersText in
-                guard let self else {
-                    return
-                }
-                numberOfPointersLabel.text = numberOfPointersText
-            }
-            .store(in: &cancellables)
-
         viewModel?.$numberOfPointers
             .sink { [weak self] value in
                 guard let self else { return }
+                numberOfPointersLabel.text = String(value)
                 numberOfPointersSlider.value = Float(value)
             }
             .store(in: &cancellables)
 
         viewModel?.$numberOfClicks
-            .sink { [weak self] numberOfClicksText in
-                guard let self else {
-                    return
-                }
-                numberOfClicksLabel.text = numberOfClicksText
+            .sink { [weak self] numberOfClicks in
+                guard let self else { return }
+                numberOfClicksLabel.text = String(numberOfClicks)
+                numberOfClicksSlider.value = Float(numberOfClicks)
             }
             .store(in: &cancellables)
 
         viewModel?.$timeInterval
-            .sink { [weak self] timeIntervalText in
-                guard let self else {
-                    return
-                }
-                timeIntervalLabel.text = timeIntervalText
+            .sink { [weak self] timeInterval in
+                guard let self else { return }
+                timeIntervalLabel.text = String(timeInterval)
+                timeIntervalSlider.value = Float(timeInterval)
             }
             .store(in: &cancellables)
     }
