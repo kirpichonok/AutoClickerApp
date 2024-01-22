@@ -12,9 +12,9 @@ class MainScreenVM {
     /// The number of visible pointers.
     @MainActor @Published private(set) var numberOfPointers = 1
     /// The text to display as the set number of clicks.
-    @MainActor @Published private(set) var numberOfClicks = 2
+    @Published private(set) var numberOfClicks = 2
     /// The text to display as the set time interval between clicks.
-    @MainActor @Published private(set) var timeInterval: Double = 2.0
+    @Published private(set) var timeInterval: Double = 2.0
     /// Displays whether the model is generating points at the moment.
     @MainActor @Published private(set) var isGenerating = false
 
@@ -33,6 +33,8 @@ class MainScreenVM {
 
     /// Handles inputted string data as a URL and broadcasts the result.
     let urlInput = PassthroughSubject<String, Never>()
+
+    // MARK: - Private properties
 
     private let model = PointsGeneratorModel()
     private var cancellables = Set<AnyCancellable>()
@@ -59,23 +61,18 @@ class MainScreenVM {
 
         model.$isGenerating
             .assign(to: &$isGenerating)
-
-        model.$numberOfClicks
-            .assign(to: &$numberOfClicks)
-
-        model.$timeInterval
-            .map { Double($0) }
-            .assign(to: &$timeInterval)
     }
 
     // MARK: - Methods
 
     func startGenerating() {
-        model.generatePoints(with: pointLocation)
+        model.start(coordinates: pointLocation,
+                    numberOfClicks: numberOfClicks,
+                    timeInterval: timeInterval)
     }
 
     func stopGenerating() {
-        model.stopGenerating()
+        model.stop()
     }
 
     @MainActor func setNumberOfPointers(_ number: Float) {
@@ -87,10 +84,10 @@ class MainScreenVM {
 
     @MainActor func setNumberOfClicks(_ number: Float) {
         let number = Int(number)
-        model.numberOfClicks = number
+        numberOfClicks = number
     }
 
     @MainActor func setTimeInterval(_ interval: Float) {
-        model.timeInterval = Double(Int(interval * 10.0)) / 10
+        timeInterval = Double(Int(interval * 10.0)) / 10
     }
 }
