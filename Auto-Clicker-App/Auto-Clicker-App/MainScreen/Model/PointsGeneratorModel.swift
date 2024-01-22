@@ -46,7 +46,7 @@ final class PointsGeneratorModel {
         reset()
     }
 
-    // MARK: -  Private methods
+    // MARK: - Private methods
 
     private func timerSetup(with timeInterval: TimeInterval, handler: @escaping (Timer) -> Void) {
         timer?.invalidate()

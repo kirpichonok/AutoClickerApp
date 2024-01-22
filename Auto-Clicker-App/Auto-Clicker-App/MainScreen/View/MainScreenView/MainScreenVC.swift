@@ -2,7 +2,7 @@ import Combine
 import UIKit
 import WebKit
 
-final class MainScreenView: UIViewController {
+final class MainScreenVC: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet private var startButtonWidth: NSLayoutConstraint!
@@ -35,7 +35,7 @@ final class MainScreenView: UIViewController {
         switch segue.identifier {
         case "goToSettings":
             if let viewController = segue.destination as? UINavigationController {
-                (viewController.viewControllers.first as? MainScreenSettingsView)?.viewModel = viewModel
+                (viewController.viewControllers.first as? MainScreenSettingsVC)?.viewModel = viewModel
             }
 
         default:
@@ -235,7 +235,7 @@ final class MainScreenView: UIViewController {
 
 // MARK: - UITextFieldDelegate
 
-extension MainScreenView: UITextFieldDelegate {
+extension MainScreenVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
 
@@ -250,7 +250,7 @@ extension MainScreenView: UITextFieldDelegate {
 
 // MARK: - WKNavigationDelegate
 
-extension MainScreenView: WKNavigationDelegate {
+extension MainScreenVC: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
         textFieldView.text = webView.url?.absoluteString
     }

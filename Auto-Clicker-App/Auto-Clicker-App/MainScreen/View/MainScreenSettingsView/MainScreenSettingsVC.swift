@@ -1,7 +1,7 @@
 import Combine
 import UIKit
 
-final class MainScreenSettingsView: UIViewController {
+final class MainScreenSettingsVC: UIViewController {
     // MARK: - Private properties
 
     @IBOutlet private var numberOfPointersLabel: UILabel!
