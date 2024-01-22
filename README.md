@@ -1,6 +1,7 @@
 # Auto Clicker App
 
 ![SDKs for iOS](https://img.shields.io/badge/SDKs%20for%20iOS-16%2B-orange)
+
 Auto Clicker allows you to simulate repeated taps on an opened web page.
 
 ## Usage
