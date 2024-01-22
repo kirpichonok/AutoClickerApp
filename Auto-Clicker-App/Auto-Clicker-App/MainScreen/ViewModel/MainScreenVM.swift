@@ -16,7 +16,7 @@ class MainScreenVM {
     /// The text to display as the set number of clicks.
     @MainActor @Published private(set) var numberOfClicks = ""
     /// The text to display as the set time interval between clicks.
-    @MainActor @Published private(set) var intervalTime = ""
+    @MainActor @Published private(set) var timeInterval = ""
     /// Displays whether the model is generating points at the moment.
     @MainActor @Published  private(set) var isGenerating = false
 
@@ -70,9 +70,9 @@ class MainScreenVM {
             .map { String($0) }
             .assign(to: &$numberOfClicks)
 
-        model.$intervalTime
+        model.$timeInterval
             .map { String($0) }
-            .assign(to: &$intervalTime)
+            .assign(to: &$timeInterval)
     }
 
     // MARK: - Methods
@@ -97,7 +97,7 @@ class MainScreenVM {
         model.numberOfClicks = number
     }
 
-    @MainActor func setIntervalTime(_ interval: Float) {
-        model.intervalTime = Double(Int(interval * 10.0)) / 10
+    @MainActor func setTimeInterval(_ interval: Float) {
+        model.timeInterval = Double(Int(interval * 10.0)) / 10
     }
 }

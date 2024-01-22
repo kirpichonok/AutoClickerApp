@@ -6,7 +6,7 @@ final class PointsGeneratorModel {
     /// Point to be updated over time.
     @Published private(set) var point: CGPoint?
     @Published var numberOfClicks = 3
-    @Published var intervalTime = 2.0
+    @Published var timeInterval = 2.0
     @Published private(set)var isGenerating = false
 
     private var timer: Timer?
@@ -25,7 +25,7 @@ final class PointsGeneratorModel {
         self.coordinates = coordinates
         currentNumberOfClicks = numberOfClicks
         isGenerating = true
-        timerSetup(with: intervalTime)
+        timerSetup(with: timeInterval)
     }
 
     func stopGenerating() {
@@ -34,7 +34,7 @@ final class PointsGeneratorModel {
 
     private func timerSetup(with _: TimeInterval) {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: intervalTime,
+        timer = Timer.scheduledTimer(withTimeInterval: timeInterval,
                                      repeats: true) { [weak self] timer in
             guard let self else {
                 timer.invalidate()

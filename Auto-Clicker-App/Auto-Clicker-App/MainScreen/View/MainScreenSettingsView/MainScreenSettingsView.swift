@@ -6,11 +6,11 @@ final class MainScreenSettingsView: UIViewController {
 
     @IBOutlet private var numberOfPointersLabel: UILabel!
     @IBOutlet private var numberOfClicksLabel: UILabel!
-    @IBOutlet private var intervalTimeLabel: UILabel!
+    @IBOutlet private var timeIntervalLabel: UILabel!
 
     @IBOutlet private var numberOfPointersSlider: UISlider!
     @IBOutlet private var numberOfClicksSlider: UISlider!
-    @IBOutlet private var intervalTimeSlider: UISlider!
+    @IBOutlet private var timeIntervalSlider: UISlider!
 
     weak var viewModel: MainScreenVM?
     private let titleFontSize: CGFloat = 18
@@ -34,8 +34,8 @@ final class MainScreenSettingsView: UIViewController {
         viewModel?.setNumberOfClicks(sender.value)
     }
 
-    @IBAction private func changeIntervalTime(_ sender: UISlider) {
-        viewModel?.setIntervalTime(sender.value)
+    @IBAction private func changeTimeInterval(_ sender: UISlider) {
+        viewModel?.setTimeInterval(sender.value)
     }
 
     private func viewSetup() {
@@ -89,12 +89,12 @@ final class MainScreenSettingsView: UIViewController {
             }
             .store(in: &cancellables)
 
-        viewModel?.$intervalTime
-            .sink { [weak self] intervalTimeText in
+        viewModel?.$timeInterval
+            .sink { [weak self] timeIntervalText in
                 guard let self else {
                     return
                 }
-                intervalTimeLabel.text = intervalTimeText
+                timeIntervalLabel.text = timeIntervalText
             }
             .store(in: &cancellables)
     }
