@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI1-hy-epZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main Screen View-->
+        <!--Main ScreenVC-->
         <scene sceneID="CYh-Zx-d4a">
             <objects>
-                <viewController id="pXs-3v-wQg" customClass="MainScreenView" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pXs-3v-wQg" customClass="MainScreenVC" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yO7-yP-vYJ" customClass="GradientBackgroundView" customModule="Auto_Clicker_App" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,37 +149,37 @@
         <!--Auto Clicker Settings-->
         <scene sceneID="yDm-tg-L2p">
             <objects>
-                <viewController title="Auto Clicker Settings" id="BCh-rn-aUE" customClass="MainScreenSettingsView" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Auto Clicker Settings" id="BCh-rn-aUE" customClass="MainScreenSettingsVC" customModule="Auto_Clicker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VIe-s9-aWh" customClass="GradientBackgroundView" customModule="Auto_Clicker_App" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="qx6-mz-Fzl">
-                                <rect key="frame" x="16" y="76" width="361" height="236"/>
+                                <rect key="frame" x="16" y="76" width="361" height="234"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fvu-Uo-nqB">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="57.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="56.666666666666664"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-ro-mO9">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="18.666666666666668"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Pointers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB2-7h-6sf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="290.33333333333331" height="19.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="18.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QIS-OA-Onq">
-                                                        <rect key="frame" x="310.33333333333331" y="0.0" width="50.666666666666686" height="19.333333333333332"/>
+                                                        <rect key="frame" x="311.33333333333331" y="0.0" width="49.666666666666686" height="18.666666666666668"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-aM-01o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="19.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="9" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" point" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paW-we-0I6">
-                                                                <rect key="frame" x="9.6666666666666856" y="0.0" width="41" height="19.333333333333332"/>
+                                                                <rect key="frame" x="9" y="0.0" width="40.666666666666664" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -194,7 +193,7 @@
                                                 </constraints>
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unh-Rt-1R2">
-                                                <rect key="frame" x="-2" y="27.333333333333329" width="365" height="31"/>
+                                                <rect key="frame" x="-2" y="26.666666666666671" width="365" height="31"/>
                                                 <connections>
                                                     <action selector="changeNumberOfPoints:" destination="BCh-rn-aUE" eventType="valueChanged" id="tUx-TA-JGD"/>
                                                 </connections>
@@ -202,28 +201,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-Ef-coc">
-                                        <rect key="frame" x="0.0" y="89.333333333333343" width="361" height="57.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="88.666666666666657" width="361" height="56.666666666666657"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-aJ-bLp">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="18.666666666666668"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Number of Clicks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dld-Ow-Je9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="270.33333333333331" height="19.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="18.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yd0-IG-aPr">
-                                                        <rect key="frame" x="290.33333333333331" y="0.0" width="70.666666666666686" height="19.333333333333332"/>
+                                                        <rect key="frame" x="290.66666666666669" y="0.0" width="70.333333333333314" height="18.666666666666668"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJx-FJ-6cU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="26.666666666666668" height="19.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="27" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" times" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-4m-Nef">
-                                                                <rect key="frame" x="26.666666666666686" y="0.0" width="44" height="19.333333333333332"/>
+                                                                <rect key="frame" x="27.000000000000004" y="0.0" width="43.333333333333343" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -237,7 +236,7 @@
                                                 </constraints>
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9Qt-29-eBo">
-                                                <rect key="frame" x="-2" y="27.333333333333314" width="365" height="31"/>
+                                                <rect key="frame" x="-2" y="26.666666666666686" width="365" height="31"/>
                                                 <connections>
                                                     <action selector="changeNumberOfClicks:" destination="BCh-rn-aUE" eventType="valueChanged" id="2U9-GT-Wvz"/>
                                                 </connections>
@@ -245,28 +244,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FVu-FB-RTc">
-                                        <rect key="frame" x="0.0" y="178.66666666666666" width="361" height="57.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="177.33333333333334" width="361" height="56.666666666666657"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GoP-is-2F4">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="18.666666666666668"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Time interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-rw-Nxv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="19.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="293.33333333333331" height="18.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KzN-Zw-KH3">
-                                                        <rect key="frame" x="311.33333333333331" y="0.0" width="49.666666666666686" height="19.333333333333332"/>
+                                                        <rect key="frame" x="313.33333333333331" y="0.0" width="47.666666666666686" height="18.666666666666668"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-2H-hLu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="19.666666666666668" height="19.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="18" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43k-Lu-Dr8">
-                                                                <rect key="frame" x="19.666666666666686" y="0.0" width="30" height="19.333333333333332"/>
+                                                                <rect key="frame" x="18" y="0.0" width="29.666666666666671" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -280,7 +279,7 @@
                                                 </constraints>
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Ydk-5w-Dmz">
-                                                <rect key="frame" x="-2" y="27.333333333333343" width="365" height="31"/>
+                                                <rect key="frame" x="-2" y="26.666666666666657" width="365" height="31"/>
                                                 <connections>
                                                     <action selector="changeTimeInterval:" destination="BCh-rn-aUE" eventType="valueChanged" id="IRI-sF-t7X"/>
                                                 </connections>
@@ -320,6 +319,7 @@
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t8y-dE-GJN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

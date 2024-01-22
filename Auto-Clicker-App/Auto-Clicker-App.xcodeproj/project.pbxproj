@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190042B22B1DF7CB00199D11 /* MainScreenView.swift */; };
+		190042B32B1DF7CC00199D11 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190042B22B1DF7CB00199D11 /* MainScreenVC.swift */; };
 		19037B6B2B5AECBA0030ABA4 /* PointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19037B6A2B5AECBA0030ABA4 /* PointerView.swift */; };
 		191E10AB2B59940600707733 /* String+K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191E10AA2B59940500707733 /* String+K.swift */; };
 		19224DA52B202966006C9113 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19224DA42B202966006C9113 /* MainScreenVM.swift */; };
@@ -21,7 +21,7 @@
 		19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */; };
 		19BBBDA42B14E3960053F1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BBBDA32B14E3960053F1C5 /* Assets.xcassets */; };
 		19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBDE822B1DA37900824BBE /* Gradient.swift */; };
-		19CAA1982B28378E0040BEEF /* MainScreenSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA1972B28378E0040BEEF /* MainScreenSettingsView.swift */; };
+		19CAA1982B28378E0040BEEF /* MainScreenSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA1972B28378E0040BEEF /* MainScreenSettingsVC.swift */; };
 		19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */; };
 		19CEB2AC2B27243D00EDF9BF /* UIView+setGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */; };
 		19CEB2B12B27433A00EDF9BF /* UIButton+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */; };
@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		190042B22B1DF7CB00199D11 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		190042B22B1DF7CB00199D11 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		19037B6A2B5AECBA0030ABA4 /* PointerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointerView.swift; sourceTree = "<group>"; };
 		191E10AA2B59940500707733 /* String+K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+K.swift"; sourceTree = "<group>"; };
 		19224DA42B202966006C9113 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		19BBBDA32B14E3960053F1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19BBBDA82B14E3960053F1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BBDE822B1DA37900824BBE /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		19CAA1972B28378E0040BEEF /* MainScreenSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenSettingsView.swift; sourceTree = "<group>"; };
+		19CAA1972B28378E0040BEEF /* MainScreenSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenSettingsVC.swift; sourceTree = "<group>"; };
 		19CEB2A92B26F67F00EDF9BF /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		19CEB2AB2B27243D00EDF9BF /* UIView+setGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setGradientBackground.swift"; sourceTree = "<group>"; };
 		19CEB2B02B27433A00EDF9BF /* UIButton+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Configuration.swift"; sourceTree = "<group>"; };
@@ -68,19 +68,11 @@
 		190042DA2B1E010100199D11 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				19D2D8EC2B59A0DA00C2CF7D /* Main.storyboard */,
 				19224DA62B20B1C8006C9113 /* View */,
 				19224DA72B20B1D6006C9113 /* ViewModel */,
-				195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */,
+				19B6C9D12B5E7BB6007977F2 /* Model */,
 			);
 			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		191E10A92B5993E600707733 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		191E10AD2B59944F00707733 /* Extension */ = {
@@ -99,6 +91,7 @@
 		19224DA62B20B1C8006C9113 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19D2D8EC2B59A0DA00C2CF7D /* Main.storyboard */,
 				19CAA1962B28375F0040BEEF /* MainScreenView */,
 				19CAA1992B2837AB0040BEEF /* MainScreenSettingsView */,
 			);
@@ -121,12 +114,28 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		19B6C9D12B5E7BB6007977F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				195F7CB82B22E3E1004FCDB4 /* PointsGeneratorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19B6C9D22B5E7BE5007977F2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */,
+				19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		19BBBD8E2B14E3940053F1C5 = {
 			isa = PBXGroup;
 			children = (
 				19BBBD992B14E3940053F1C5 /* Auto-Clicker-App */,
 				19BBBD982B14E3940053F1C5 /* Products */,
-				191E10A92B5993E600707733 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,11 +150,9 @@
 		19BBBD992B14E3940053F1C5 /* Auto-Clicker-App */ = {
 			isa = PBXGroup;
 			children = (
-				19BBBD9A2B14E3940053F1C5 /* AppDelegate.swift */,
-				19BBBD9C2B14E3940053F1C5 /* SceneDelegate.swift */,
+				19B6C9D22B5E7BE5007977F2 /* App */,
 				190042DA2B1E010100199D11 /* MainScreen */,
 				19BBDE842B1DA37D00824BBE /* Helpers */,
-				19BBBDA32B14E3960053F1C5 /* Assets.xcassets */,
 				19BBBDA82B14E3960053F1C5 /* Info.plist */,
 			);
 			path = "Auto-Clicker-App";
@@ -154,6 +161,7 @@
 		19BBDE842B1DA37D00824BBE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				19BBBDA32B14E3960053F1C5 /* Assets.xcassets */,
 				191E10AD2B59944F00707733 /* Extension */,
 				19BBDE852B1DA38700824BBE /* UI */,
 			);
@@ -176,7 +184,7 @@
 		19CAA1962B28375F0040BEEF /* MainScreenView */ = {
 			isa = PBXGroup;
 			children = (
-				190042B22B1DF7CB00199D11 /* MainScreenView.swift */,
+				190042B22B1DF7CB00199D11 /* MainScreenVC.swift */,
 			);
 			path = MainScreenView;
 			sourceTree = "<group>";
@@ -184,7 +192,7 @@
 		19CAA1992B2837AB0040BEEF /* MainScreenSettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				19CAA1972B28378E0040BEEF /* MainScreenSettingsView.swift */,
+				19CAA1972B28378E0040BEEF /* MainScreenSettingsVC.swift */,
 			);
 			path = MainScreenSettingsView;
 			sourceTree = "<group>";
@@ -290,7 +298,7 @@
 				19BBBD9D2B14E3940053F1C5 /* SceneDelegate.swift in Sources */,
 				19CEB2AA2B26F67F00EDF9BF /* GradientBackgroundView.swift in Sources */,
 				19CEB2B12B27433A00EDF9BF /* UIButton+Configuration.swift in Sources */,
-				190042B32B1DF7CC00199D11 /* MainScreenView.swift in Sources */,
+				190042B32B1DF7CC00199D11 /* MainScreenVC.swift in Sources */,
 				193CC4A22B5CE2A900352A44 /* UIFont+appFont.swift in Sources */,
 				193CC49C2B5CDA1800352A44 /* RoundedTextField.swift in Sources */,
 				19CEB2AC2B27243D00EDF9BF /* UIView+setGradientBackground.swift in Sources */,
@@ -298,7 +306,7 @@
 				19037B6B2B5AECBA0030ABA4 /* PointerView.swift in Sources */,
 				19BBDE832B1DA37900824BBE /* Gradient.swift in Sources */,
 				195F7CB92B22E3E1004FCDB4 /* PointsGeneratorModel.swift in Sources */,
-				19CAA1982B28378E0040BEEF /* MainScreenSettingsView.swift in Sources */,
+				19CAA1982B28378E0040BEEF /* MainScreenSettingsVC.swift in Sources */,
 				19FFB5A92B29798500CBAFF8 /* UIImage+scaleTo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
