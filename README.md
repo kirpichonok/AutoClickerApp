@@ -24,7 +24,7 @@ Auto Clicker allows you to simulate repeated taps on an opened web page.
 
 ## Stack of technologies
 
-- SwiftUI
+- UIKit
 - MVVM
 - Combine
 - Storyboard
